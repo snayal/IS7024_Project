@@ -2,6 +2,13 @@
 
 # Topic
 -------
+
+#### Group members
+
+-  Shashi
+
+-  Ioana
+
 ## Introduction
 
 
@@ -24,12 +31,12 @@
 
 ## Data Sources
 
+## Class Diagram
 
-#### Group members
+#### Class Diagram Discription
 
--  Shashi
 
--  Ioana
+
 
 ![Garden](https://user-images.githubusercontent.com/47906013/111018074-eb356980-8384-11eb-9aed-8680c6f80fce.jpg)
 
