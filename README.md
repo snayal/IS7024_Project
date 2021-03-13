@@ -1,12 +1,15 @@
 # IS7024_Project
-### XML Project
 
-***Design Document
+## Topic
 
-**Introduction:
+### Introduction
 
 
-**Data Sources:
+### Data Sources
 
-**Group Members:
-*Shashi & Ioana
+
+#### Group members
+
+-Shashi
+
+-Ioana
