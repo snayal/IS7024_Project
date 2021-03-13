@@ -1,15 +1,15 @@
 # IS7024_Project
 
-## Topic
+# Topic
 -------
-### Introduction
+## Introduction
 
 
-### Data Sources
+## Data Sources
 
 
 #### Group members
 
-- Shashi
+-  Shashi
 
-- Ioana
+-  Ioana
