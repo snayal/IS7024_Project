@@ -1,7 +1,7 @@
 # IS7024_Project
 
 ## Topic
-
+-------
 ### Introduction
 
 
@@ -10,6 +10,6 @@
 
 #### Group members
 
--Shashi
+- Shashi
 
--Ioana
+- Ioana
