@@ -35,10 +35,9 @@ Do you want to find the best location for your future investment? Do you know ho
 ________________________________________
 ## Data Feeds
 
-- [PDI (Police Data Initiative) Crime Incidents] (https://data.cincinnati-oh.gov/Safety/PDI-Police-Data-Initiative-Crime-Incidents/k59e-2pvf)
-
-
 - [Commercial Economic Incentives- City of Cincinnati] (https://data.cincinnati-oh.gov/Growing-Economic-Opportunities/Commercial-Economic-Incentives-City-of-Cincinnati/m76i-p5p9)
+
+- [PDI (Police Data Initiative) Crime Incidents] (https://data.cincinnati-oh.gov/Safety/PDI-Police-Data-Initiative-Crime-Incidents/k59e-2pvf)
 
 - [Cincinnati Health Department Health Care Centers] (https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-Health-Department-Health-Care-Centers/v8yh-wpss)
 
