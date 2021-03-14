@@ -113,6 +113,7 @@ Neighborhood name is correct.
 
 
 #### Scenario
+
 A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby
 
 ***Dependencies***
@@ -128,7 +129,8 @@ A person wants to search for a property type in Cincinnati which has low crime i
 ***Assumptions***
 
 - Neighborhood with Low crime incidents
--Healthcare center nearby
+
+- Healthcare center nearby
 
 **Example 1.1**
 
