@@ -47,7 +47,7 @@ ________________________________________
 
 ### Requirement 1: 
 
-***Search for type of property ***
+***Search for type of property***
 
 
 #### Scenario
