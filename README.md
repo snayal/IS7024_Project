@@ -159,9 +159,7 @@ A person wants to search for a property type in Cincinnati which has low crime i
 ________________________________________
 
 ## Roles
-- Frontend Developer: Shashi Rautela
-
-- Integration Developer: Ioana Guna 
+- Frontend Developer/Integration Developer/ Backend Development: Shashi Rautela & Ioana Guna 
 
 ## Weekly Meeting 
 
