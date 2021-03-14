@@ -6,32 +6,32 @@
 ## Topic : "Finding a property near good helathcare centers & low crime incidents) 
 -------
 
-Design Document
+##### Design Document
 
-Shashi Rautela
+- Shashi Rautela
 
 Ioana Guna
 
 ## Introduction
 
-Do you want to find the best location for your future investment? Do you know how to search properties that are located in a safe location? MyFutureInvestment can help you:
+Do you want to find the best location for your future investment? Do you know how to search properties that are located in a safe location with healthcare facilities? MyFutureInvestment can help you:
 
--	Record dates and location of incidents that happened. 
--	Take and view photos of a street/building/neighborhood.
--	Record when you visited the location and why you had interested in it.
--	Be aware of potential growth of specific locations such as future projects.
+-	Check location with crime incidents reported 
+
+-	Know potential growth of specific locations such as future projects.
  
-Use your web browser to decide your own future investment. Create reminders based on what you visited in the past. Receive alerts about upcoming projects.
+- Decide which neighborhood you want to invest
 
 
-Looking for ……   (Story)
 
+***Search***  neighborhood / street address
 
-***Search*** neighborhood / street address
+***View***  Crime incident / healthcare center
 
-***View*** Crime incident / healthcare center
+***Search***  Project type (Residential / Office / Mixed use)
 
-***Search*** Project type (Residential / Office / Mixed use)
+***View***  Street Address in Cincinnati 
+
 ________________________________________
 ## Data Feeds
 
@@ -45,82 +45,74 @@ ________________________________________
 ________________________________________
 ## Functional Requirements
 
-### Requirement 1: Search for Property
+### Requirement 1: 
+
+***Search for type of property ***
+
 
 #### Scenario
 
-As a user interested in investing in a particular neighborhood in Cincinnati, I want to be able to search properties that have low crime rate.
+As a user interested in investing in a particular property type in Cincinnati,  he/she can search property address based on his/ her selection type. 
 
 #### Dependencies
 
-Incidents search data are available and accessible.
+Property type projects in Cincinnati data are available and accessible.
 
 #### Assumptions
 
-Location is accurate.
+
+***Property type: Residential / Office / Mixed use***
+
 
 #### Examples
 
 1.1
 
-**Given** a name of street data is available
-**When** I search for “Calhoun St”
-**Then** I should receive all incidents that happened on Calhoun Street.
+**Given**  Property type 
+**When**  Residential
 
-1.2 
+**Then**  receive list of Residential property details
 
-**Given** a date reported data is available.
-**When** I search “2020”
-**Then** I should receive at least one result with these attributes:
-Address: “Calhoun Street”
-Date Reported: “2020”.
 
-1.3 
-**Given** a name of street data is available
-**When** I search for “shbcuhcuihe”
-**Then** I should receive zero results (an empty list)
 
-### Requirement 2: Save Property/Land
+
+### Requirement 2: 
+
+***Property investment in the safe Neighborhood with Healthcare facilities nearyby***
 
 #### Scenario
 
-As a user interested in investing, I want to be able to enter and save details of a property/land: date visited, photos, and address, so that I can review a history of this neighborhood.
+As a user interested in investing in property in the safe neighborhood 
 
 #### Dependencies
 
-Property/Land search data are available and accessible.
+Crime incident/Healthcare centers in the particular street address are available and accessible.
 
 #### Assumptions
 
-Street name is stated correct.
+Neighborhood name is correct.
+
+
 
 #### Examples
 
-1.1
+1.1  search safe neighborhood for property investment
 
-**Given** a name of street data is available
-**When** 
-- Select the street name “Calhoun Street”
-- Add notes: “visited by Ioana Guna”
+**Given**  Neighborhood
+**When**  Crime incident 
 
-**Then** when I navigate to the Street History view, I should see at least one property/land with the notes, “visited by Ioana Guna”.
+
+**Then** should see list of crime incidents in that neighborhood 
+
 
 1.2 
 
-**Given** a name of street data is available
-**When** 	
-- Select the property
-- Upload a photo of the property.
-
-**Then** when I navigate to the Street History view, I should see at least one property with a photo of that building/land.
+**Given** Neighborhood
+**When** 	healthcare centers
+**Then** list of healthcare centers in particular neighborhood 
 
 
-***Search***  Project type (Residential / Office / Mixed use)
-
-
-***Scenario***
-
-A person wants to search for a property in a particular neighborhood in Cincinnati which has low crime incident and healthcare centers nearby
+A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby
 
 ***Dependencies***
 
@@ -131,32 +123,37 @@ A person wants to search for a property in a particular neighborhood in Cincinna
 -Cincinnati Health Department Health Care Centers
 
 
+
 ***Assumptions***
 
--Low crime rate
--Reasonable property tax
+- Neighborhood with Low crime incidents
 -Healthcare center nearby
 
 **Example 1.1**
 
-***Given***
+***Given***  Neighborhood 
 
-***When***  property type 
+***When***  Less crime incidents 
 
 ***Then*** Should receive at least one result with these attributes
 
--Property details
+- List of Neighborhoods in low crime incidents 
 
--Crime incident
+**Example 1.2**
 
--Healthcare centers
+***Given***  Neighborhood 
+
+***When***  Healthcare centers 
+
+***Then*** Should receive at least one result with these attributes
+
+- List of Neighborhoods near Healthcare centers
+
 ________________________________________
 
-## Scrum Roles
-
-- DevOps/Product Owner/Scrum Master: Ioana Guna & Sashi Rautela
-- Frontend Developer: Ioana Guna & Sashi Rautela
-- Integration Developer: Ioana Guna & Sashi Rautela
+## Roles
+- Frontend Developer: Shashi Rautela
+- Integration Developer: Ioana Guna 
 
 ## Weekly Meeting 
 
@@ -166,6 +163,7 @@ ________________________________________
 
 
 ## Class Diagram
+
 
 #### Class Diagram Discription
 
