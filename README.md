@@ -69,6 +69,7 @@ Property type projects in Cincinnati data are available and accessible.
 1.1
 
 **Given**  Property type 
+
 **When**  Residential
 
 **Then**  receive list of Residential property details
@@ -99,6 +100,7 @@ Neighborhood name is correct.
 1.1  search safe neighborhood for property investment
 
 **Given**  Neighborhood
+
 **When**  Crime incident 
 
 
@@ -108,7 +110,9 @@ Neighborhood name is correct.
 1.2 Search for healthcare centers around neighborhood street address
 
 **Given** Neighborhood address
+
 **When** 	healthcare centers
+
 **Then** list of healthcare centers in particular neighborhood 
 
 
@@ -156,6 +160,7 @@ ________________________________________
 
 ## Roles
 - Frontend Developer: Shashi Rautela
+
 - Integration Developer: Ioana Guna 
 
 ## Weekly Meeting 
