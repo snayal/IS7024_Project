@@ -161,11 +161,3 @@ ________________________________________
 -Friday at 3 pm on Teams
 
 
-## Class Diagram
-
-
-#### Class Diagram Discription
-
-
-
-
