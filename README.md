@@ -1,6 +1,6 @@
 # IS7024_Project
 
-# Topic : Finding property (residential / office / mixed use) with low crime rate and good helathcare centers
+## Topic : Finding property (residential / office / mixed use) with low crime rate and good helathcare centers
 -------
 
 #### Group members
@@ -9,7 +9,7 @@
 
 -  Ioana
 
-# Introduction
+### Introduction
 Looking for ……   (Story)
 
 
@@ -17,7 +17,7 @@ Looking for ……   (Story)
 ***View*** Crime incident / healthcare center
 ***Search*** Project type (Residential / Office / Mixed use)
 ________________________________________
-# Data Feeds
+### Data Feeds
 [PDI (Police Data Initiative) Crime Incidents] (“https://data.cincinnati-oh.gov/Safety/PDI-Police-Data-Initiative-Crime-Incidents/k59e-2pvf”)
 
 
@@ -26,7 +26,7 @@ ________________________________________
 [Cincinnati Health Department Health Care Centers] (“https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-Health-Department-Health-Care-Centers/v8yh-wpss”)
 
 ________________________________________
-## Functional Requirements
+### Functional Requirements
 ***Search***  Project type (Residential / Office / Mixed use)
 
 
