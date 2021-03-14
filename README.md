@@ -24,7 +24,7 @@ Do you want to find the best location for your future investment? Do you know ho
 
 
 
-***Search***  neighborhood / street address
+***Search***  neighborhood / street address / zipcode
 
 ***View***  Crime incident / healthcare center
 
@@ -81,11 +81,11 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 #### Scenario 1:
 
-- **As a user interested in investing in property in the safe neighborhood** 
+- As a user interested in investing in property in the safe neighborhood
 
 #### Dependencies
 
-- **Crime incidents/Healthcare centers based on street address are available and accessible.**
+- Crime incidents/Healthcare centers based on street address are available and accessible.
 
 #### Assumptions
 
