@@ -1,6 +1,6 @@
 # IS7024_Project
 
-## Topic : Finding property (residential / office / mixed use) with low crime rate and good helathcare centers
+## Topic : "Finding a property near good helathcare centers & low crime incidents) 
 -------
 
 #### Group members
