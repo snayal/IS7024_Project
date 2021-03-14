@@ -56,7 +56,7 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 #### Dependencies
 
-Property type projects in Cincinnati data are available and accessible.
+Different type of Property projects in Cincinnati data are available and accessible.
 
 #### Assumptions
 
@@ -64,9 +64,8 @@ Property type projects in Cincinnati data are available and accessible.
 ***Property type***
 
 
-#### Examples
-
-#### 1.1 Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati
+#### Examples 1.1 
+Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati
 
 **Given**  Street address/ town
 
@@ -75,19 +74,17 @@ Property type projects in Cincinnati data are available and accessible.
 **Then**  receive list of Residential property details
 
 
-
-
 ### Requirement 2: 
 
 ***Property investment in the safe Neighborhood with Healthcare facilities nearyby***
 
-#### Scenario
+#### Scenario 1)
 
-As a user interested in investing in property in the safe neighborhood 
+**As a user interested in investing in property in the safe neighborhood** 
 
 #### Dependencies
 
-Crime incident/Healthcare centers in the particular street address are available and accessible.
+**Crime incidents/Healthcare centers based on street address are available and accessible.**
 
 #### Assumptions
 
@@ -95,30 +92,35 @@ Neighborhood name is correct.
 
 
 
-#### Examples
+####  Example 1.1  
 
-##### 1.1  search safe neighborhood for property investment
+**search safe neighborhood for property investment**
 
-**Given**  Neighborhood
+- **Given**  Neighborhood
 
-**When**  Crime incident 
+- **When**  Crime incident
+
+-  **Then**  List of crime reported in the given neighborhood 
+
 
 
 **Then** should see list of crime incidents in that neighborhood 
 
 
-##### 1.2 Search for healthcare centers around neighborhood street address
+##### Example 1.2 
 
-**Given**   Neighborhood address
+**Search for healthcare centers around neighborhood street address**
 
-**When** 	 healthcare centers
+- **Given**   Neighborhood address
 
-**Then** list of healthcare centers in particular neighborhood 
+- **When** 	 healthcare centers
+
+- **Then** list of healthcare centers in the given neighborhood 
 
 
-#### Scenario
+#### Scenario 2)
 
-A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby
+**A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby**
 
 ***Dependencies***
 
