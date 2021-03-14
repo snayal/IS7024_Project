@@ -61,14 +61,14 @@ Property type projects in Cincinnati data are available and accessible.
 #### Assumptions
 
 
-***Property type: Residential / Office / Mixed use***
+***Property type***
 
 
 #### Examples
 
-1.1
+#### 1.1 Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati
 
-**Given**  Property type 
+**Given**  Street address/ town
 
 **When**  Residential
 
@@ -97,7 +97,7 @@ Neighborhood name is correct.
 
 #### Examples
 
-1.1  search safe neighborhood for property investment
+##### 1.1  search safe neighborhood for property investment
 
 **Given**  Neighborhood
 
@@ -107,11 +107,11 @@ Neighborhood name is correct.
 **Then** should see list of crime incidents in that neighborhood 
 
 
-1.2 Search for healthcare centers around neighborhood street address
+##### 1.2 Search for healthcare centers around neighborhood street address
 
-**Given** Neighborhood address
+**Given**   Neighborhood address
 
-**When** 	healthcare centers
+**When** 	 healthcare centers
 
 **Then** list of healthcare centers in particular neighborhood 
 
@@ -122,11 +122,11 @@ A person wants to search for a property type in Cincinnati which has low crime i
 
 ***Dependencies***
 
--Commercial Economic Incentives- City of Cincinnati
+- Commercial Economic Incentives- City of Cincinnati
  
--Commercial Economic Incentives- City of Cincinnati
+- Commercial Economic Incentives- City of Cincinnati
 
--Cincinnati Health Department Health Care Centers
+- Cincinnati Health Department Health Care Centers
 
 
 
