@@ -10,7 +10,7 @@
 
 - Shashi Rautela
 
-Ioana Guna
+- Ioana Guna
 
 ## Introduction
 
