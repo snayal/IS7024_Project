@@ -3,7 +3,7 @@
 
 ![neighborhood1](https://user-images.githubusercontent.com/47906013/111054373-31003980-843a-11eb-8a5f-7c090de88f7c.jpg)
 
-## Topic : "Finding a property near good helathcare centers & low crime incidents) 
+## Topic : "Finding a property near good helathcare centers & low crime incidents"
 -------
 
 ##### Design Document
