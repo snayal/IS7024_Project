@@ -42,7 +42,8 @@ ________________________________________
 - [Cincinnati Health Department Health Care Centers](https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-Health-Department-Health-Care-Centers/v8yh-wpss)
 
 ________________________________________
-## Functional Requirements
+
+-> ## Functional Requirements <-
 
 ### Requirement 1: 
 
@@ -55,7 +56,7 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 #### Dependencies
 
-Different type of Property projects in Cincinnati data are available and accessible.
+- Different type of Property projects in Cincinnati data are available and accessible.
 
 #### Assumptions
 
@@ -64,30 +65,31 @@ Different type of Property projects in Cincinnati data are available and accessi
 
 
 #### Examples 1.1 
-Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati
 
-**Given**  Street address/ town
+**Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati**
 
-**When**  Residential
+- **Given**  Street address/ town
 
-**Then**  receive list of Residential property details
+- **When**  Residential
+
+- **Then**  receive list of Residential property details
 
 
 ### Requirement 2: 
 
 ***Property investment in the safe Neighborhood with Healthcare facilities nearyby***
 
-#### Scenario 1)
+#### Scenario 1:
 
-**As a user interested in investing in property in the safe neighborhood** 
+- **As a user interested in investing in property in the safe neighborhood** 
 
 #### Dependencies
 
-**Crime incidents/Healthcare centers based on street address are available and accessible.**
+- **Crime incidents/Healthcare centers based on street address are available and accessible.**
 
 #### Assumptions
 
-Neighborhood name is correct.
+- **Neighborhood name is correct.**
 
 
 
@@ -102,10 +104,6 @@ Neighborhood name is correct.
 -  **Then**  List of crime reported in the given neighborhood 
 
 
-
-**Then** should see list of crime incidents in that neighborhood 
-
-
 ##### Example 1.2 
 
 **Search for healthcare centers around neighborhood street address**
@@ -117,18 +115,15 @@ Neighborhood name is correct.
 - **Then** list of healthcare centers in the given neighborhood 
 
 
-#### Scenario 2)
+#### Scenario 2:
 
 **A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby**
 
 ***Dependencies***
 
-- Commercial Economic Incentives- City of Cincinnati
- 
-- Commercial Economic Incentives- City of Cincinnati
+- Crime incidents in Cincinnati data source is available
 
-- Cincinnati Health Department Health Care Centers
-
+- Cincinnati Healthcare Centers data is available 
 
 
 ***Assumptions***
@@ -139,28 +134,25 @@ Neighborhood name is correct.
 
 **Example 1.1**
 
-***Given***  Neighborhood 
+- ***Given***  Neighborhood 
 
-***When***  Less crime incidents 
+- ***When***  crime incidents 
 
-***Then*** Should receive at least one result with these attributes
-
-- List of Neighborhoods in low crime incidents 
+- ***Then*** List of Neighborhoods with reported number of crime incidents 
 
 **Example 1.2**
 
-***Given***  Neighborhood 
+- ***Given***  Neighborhood 
 
-***When***  Healthcare centers 
+- ***When***  Healthcare centers 
 
-***Then*** Should receive at least one result with these attributes
-
-- List of Neighborhoods near Healthcare centers
+- ***Then***  List of Neighborhoods near Healthcare centers
 
 ________________________________________
 
 ## Roles
-- Frontend Developer/Integration Developer/ Backend Development: Shashi Rautela & Ioana Guna 
+
+- Frontend Developer/Integration Developer/ Backend Development: **Shashi Rautela & Ioana Guna**
 
 ## Weekly Meeting 
 
