@@ -19,9 +19,10 @@ Do you want to find the best location for your future investment? Do you know ho
 -	Record dates and location of incidents that happened. 
 -	Take and view photos of a street/building/neighborhood.
 -	Record when you visited the location and why you had interested in it.
--	Be aware of potential growth of specific locations such as future project.
+-	Be aware of potential growth of specific locations such as future projects.
  
 Use your web browser to decide your own future investment. Create reminders based on what you visited in the past. Receive alerts about upcoming projects.
+
 
 Looking for ……   (Story)
 
