@@ -105,13 +105,14 @@ Neighborhood name is correct.
 **Then** should see list of crime incidents in that neighborhood 
 
 
-1.2 
+1.2 Search for healthcare centers around neighborhood street address
 
-**Given** Neighborhood
+**Given** Neighborhood address
 **When** 	healthcare centers
 **Then** list of healthcare centers in particular neighborhood 
 
 
+#### Scenario
 A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby
 
 ***Dependencies***
