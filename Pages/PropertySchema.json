@@ -1,0 +1,142 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/WelcomeElement"
+  },
+  "definitions": {
+    "WelcomeElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "project_type": {
+          "$ref": "#/definitions/ProjectType"
+        },
+        "project_no": {
+          "type": "string"
+        },
+        "project_category": {
+          "$ref": "#/definitions/ProjectCategory"
+        },
+        "program_type": {
+          "$ref": "#/definitions/ProgramType"
+        },
+        "organization_legal_name": {
+          "type": "string"
+        },
+        "project_name": {
+          "type": "string"
+        },
+        "approved_by_city_council": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "total_project_cost_est": {
+          "type": "string"
+        },
+        "total_funding_all_sources_est": {
+          "type": "string",
+          "format": "integer"
+        },
+        "est_program_total_value": {
+          "type": "string",
+          "format": "integer"
+        },
+        "site_street_address": {
+          "type": "string"
+        },
+        "zip_code": {
+          "type": "string",
+          "format": "integer"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "neighborhood": {
+          "type": "string"
+        },
+        "community_council_neighborhood": {
+          "type": "string"
+        },
+        "agreement_executed_by_company": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "community_council_neighborhood",
+        "est_program_total_value",
+        "neighborhood",
+        "project_name",
+        "project_no"
+      ],
+      "title": "WelcomeElement"
+    },
+    "ProgramType": {
+      "type": "string",
+      "enum": [
+        "OTHER CITY LOAN",
+        "CRA",
+        "LEED CRA",
+        "HOME",
+        "CAPITAL GRANT",
+        "TRIPLE NET LEASE",
+        "OTHER CITY GRANT",
+        "PROJECT TIF",
+        "BELOW MARKET RATE SALE",
+        "CDBG GRANT",
+        "JCTC",
+        "GROW CINCINNATI LOAN FUND",
+        "PIR",
+        "DISTRICT TIF",
+        "TIF GRANT",
+        "FOCUS 52",
+        "GROSS LEASE",
+        "Loan",
+        "Grant",
+        "Multiple",
+        "TIF",
+        "Land Sale",
+        "Lease"
+      ],
+      "title": "ProgramType"
+    },
+    "ProjectCategory": {
+      "type": "string",
+      "enum": [
+        "LOAN",
+        "COMMERCIAL TAX ABATEMENT",
+        "GRANT",
+        "LEASE OF CITY PROPERTY",
+        "TAX INCREMENT FINANCING",
+        "SALE OF CITY PROPERTY",
+        "TAX INCENTIVE"
+      ],
+      "title": "ProjectCategory"
+    },
+    "ProjectType": {
+      "type": "string",
+      "enum": [
+        "RESIDENTIAL",
+        "MIXED USE",
+        "UNDETERMINED",
+        "OFFICE",
+        "PUBLIC INFRASTRUCTURE",
+        "HOTEL",
+        "INDUSTRIAL",
+        "RETAIL",
+        "Mixed Use",
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "Other",
+        "Office",
+        "Infrastructure"
+      ],
+      "title": "ProjectType"
+    }
+  }
+}

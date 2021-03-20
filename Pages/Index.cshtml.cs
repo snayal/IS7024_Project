@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using QuickType;
+
 
 namespace IS7024_Project.Pages
 {
@@ -19,7 +22,7 @@ namespace IS7024_Project.Pages
 
         public void OnGet()
         {
-
+           
         }
     }
 }
