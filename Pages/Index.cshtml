@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
+    var welcomes = (QuickType.Property[])ViewData["Welcome"];
 
 }
 
@@ -39,8 +39,8 @@
             <th>Agreement</th>
         </tr>
         @{ 
-            foreach (QuickType.Welcome welcome in welcomes)
-           {
+            foreach (QuickType.Property welcome in welcomes)
+            {
                 <tr>
                 <td>@welcome.ProjectType</td>
                 <td>@welcome.ProjectNo</td>

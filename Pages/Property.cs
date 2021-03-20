@@ -17,7 +17,7 @@ namespace QuickType
     using QuickType;
     using System.Net;
 
-    public partial class Welcome
+    public partial class Property
     {
         [JsonProperty("project_type", NullValueHandling = NullValueHandling.Ignore)]
         public ProjectType? ProjectType { get; set; }
@@ -80,14 +80,14 @@ namespace QuickType
 
     public enum ProjectType { Commercial, Hotel, Industrial, Infrastructure, MixedUse, Office, Other, ProjectTypeIndustrial, ProjectTypeMixedUse, ProjectTypeOffice, ProjectTypeResidential, PublicInfrastructure, Residential, Retail, Undetermined };
 
-    public partial class Welcome
+    public partial class Property
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, QuickType.Converter.Settings);
+        public static Property[] FromJson(string json) => JsonConvert.DeserializeObject<Property[]>(json, QuickType.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this Property[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
     }
 
     internal static class Converter
