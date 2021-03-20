@@ -31,8 +31,8 @@ namespace IS7024_Project.Pages
                 IList<string> validationEvents = new List<string>();
                 if (jsonArray.IsValid(schema, out validationEvents))
                 {
-                    var welcome = Property.FromJson(jsonString);
-                    ViewData["Welcome"] = welcome;
+                    var property = Property.FromJson(jsonString);
+                    ViewData["Property"] = property;
                 }
                 else
                 {
@@ -40,7 +40,7 @@ namespace IS7024_Project.Pages
                     {
                         Console.WriteLine(evt);
                     }
-                    ViewData["Welcome"] = new List<Property>();
+                    ViewData["Property"] = new List<Property>();
                 }
             }
         }

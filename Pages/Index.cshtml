@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var welcomes = (QuickType.Property[])ViewData["Welcome"];
+    var properties = (QuickType.Property[])ViewData["Property"];
 
 }
 
@@ -39,26 +39,26 @@
             <th>Agreement</th>
         </tr>
         @{ 
-            foreach (QuickType.Property welcome in welcomes)
+            foreach (QuickType.Property property in properties)
             {
                 <tr>
-                <td>@welcome.ProjectType</td>
-                <td>@welcome.ProjectNo</td>
-                <td>@welcome.ProjectCategory</td>
-                <td>@welcome.ProgramType</td>
-                <td>@welcome.OrganizationLegalName</td>
-                <td>@welcome.ProjectName</td>
-                <td>@welcome.ApprovedByCityCouncil</td>
-                <td>@welcome.TotalProjectCostEst</td>
-                <td>@welcome.TotalFundingAllSourcesEst</td>
-                <td>@welcome.EstProgramTotalValue</td>
-                <td>@welcome.SiteStreetAddress</td>
-                <td>@welcome.ZipCode</td>
-                <td>@welcome.Longitude</td>
-                <td>@welcome.Latitude</td>
-                <td>@welcome.Neighborhood</td>
-                <td>@welcome.CommunityCouncilNeighborhood</td>
-                <td>@welcome.AgreementExecutedByCompany</td>
+                <td>@property.ProjectType</td>
+                <td>@property.ProjectNo</td>
+                <td>@property.ProjectCategory</td>
+                <td>@property.ProgramType</td>
+                <td>@property.OrganizationLegalName</td>
+                <td>@property.ProjectName</td>
+                <td>@property.ApprovedByCityCouncil</td>
+                <td>@property.TotalProjectCostEst</td>
+                <td>@property.TotalFundingAllSourcesEst</td>
+                <td>@property.EstProgramTotalValue</td>
+                <td>@property.SiteStreetAddress</td>
+                <td>@property.ZipCode</td>
+                <td>@property.Longitude</td>
+                <td>@property.Latitude</td>
+                <td>@property.Neighborhood</td>
+                <td>@property.CommunityCouncilNeighborhood</td>
+                <td>@property.AgreementExecutedByCompany</td>
                 </tr> 
             }
           }
