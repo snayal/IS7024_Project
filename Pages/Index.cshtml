@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
 
 }
 
@@ -9,7 +10,57 @@
     <h1 class="display-4">Propety Investment</h1>
     <img src="/images/neighborhood1.jpg" />
     <hr />
-    
 
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+   
+</div>
+
+
+<div class="text-center">
+  
+    <table>
+        <tr>
+            <th>Project Type</th>
+            <th>Project Number</th>
+            <th>Category</th>
+            <th>Program Type</th>
+            <th>Organization</th>
+            <th>Project Name</th>
+            <th>Approved By</th>
+            <th>Total Cost</th>
+            <th>Total Funding</th>
+            <th>Total Value</th>
+            <th>Street Address</th>
+            <th>Zip Code</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Neighborhood</th>
+            <th>Community Council Neighborhood</th>
+            <th>Agreement</th>
+        </tr>
+        @{ 
+            foreach (QuickType.Welcome welcome in welcomes)
+           {
+                <tr>
+                <td>@welcome.ProjectType</td>
+                <td>@welcome.ProjectNo</td>
+                <td>@welcome.ProjectCategory</td>
+                <td>@welcome.ProgramType</td>
+                <td>@welcome.OrganizationLegalName</td>
+                <td>@welcome.ProjectName</td>
+                <td>@welcome.ApprovedByCityCouncil</td>
+                <td>@welcome.TotalProjectCostEst</td>
+                <td>@welcome.TotalFundingAllSourcesEst</td>
+                <td>@welcome.EstProgramTotalValue</td>
+                <td>@welcome.SiteStreetAddress</td>
+                <td>@welcome.ZipCode</td>
+                <td>@welcome.Longitude</td>
+                <td>@welcome.Latitude</td>
+                <td>@welcome.Neighborhood</td>
+                <td>@welcome.CommunityCouncilNeighborhood</td>
+                <td>@welcome.AgreementExecutedByCompany</td>
+                </tr> 
+            }
+          }
+    </table>
 </div>
