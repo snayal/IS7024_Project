@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using QuickType;
-
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace IS7024_Project.Pages
 {
@@ -22,7 +23,27 @@ namespace IS7024_Project.Pages
 
         public void OnGet()
         {
-           
+            using (var webClient = new WebClient())
+            {
+                string jsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+                JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
+                JArray jsonArray = JArray.Parse(jsonString);
+                IList<string> validationEvents = new List<string>();
+                if (jsonArray.IsValid(schema, out validationEvents))
+                {
+                    var welcome = Welcome.FromJson(jsonString);
+                    ViewData["Welcome"] = welcome;
+                }
+                else
+                {
+                    foreach (string evt in validationEvents)
+                    {
+                        Console.WriteLine(evt);
+                    }
+                    ViewData["Welcome"] = new List<Welcome>();
+                }
+            }
         }
     }
 }
+    
