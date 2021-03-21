@@ -1,0 +1,204 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/HealthcareElement"
+  },
+  "definitions": {
+    "HealthcareElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "health_center": {
+          "type": "string"
+        },
+        "health_center_code": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "street_name": {
+          "type": "string"
+        },
+        "sufx": {
+          "$ref": "#/definitions/Sufx"
+        },
+        "city": {
+          "$ref": "#/definitions/City"
+        },
+        "state": {
+          "$ref": "#/definitions/State"
+        },
+        "zipcode": {
+          "type": "string",
+          "format": "integer"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "care_type": {
+          "type": "string"
+        },
+        "monday_open": {
+          "$ref": "#/definitions/DayOpen"
+        },
+        "monday_close": {
+          "type": "string"
+        },
+        "tuesday_open": {
+          "$ref": "#/definitions/DayOpen"
+        },
+        "tuesday_close": {
+          "type": "string"
+        },
+        "wednesday_open": {
+          "$ref": "#/definitions/DayOpen"
+        },
+        "wednesday_close": {
+          "type": "string"
+        },
+        "thursday_open": {
+          "$ref": "#/definitions/DayOpen"
+        },
+        "thursday_close": {
+          "type": "string"
+        },
+        "friday_open": {
+          "$ref": "#/definitions/DayOpen"
+        },
+        "friday_close": {
+          "type": "string"
+        },
+        "neighborhood": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "services_provided": {
+          "type": "string"
+        },
+        "center_description": {
+          "type": "string"
+        },
+        "insurance_accepted": {
+          "type": "string"
+        },
+        "title_x_services": {
+          "$ref": "#/definitions/Adult"
+        },
+        "adult": {
+          "$ref": "#/definitions/Adult"
+        },
+        "pediatrics": {
+          "$ref": "#/definitions/Adult"
+        },
+        "ob": {
+          "$ref": "#/definitions/Adult"
+        },
+        "nursing_services": {
+          "$ref": "#/definitions/Adult"
+        },
+        "lab": {
+          "$ref": "#/definitions/Adult"
+        },
+        "immunizations": {
+          "$ref": "#/definitions/Adult"
+        },
+        "outreach_enrollment_services": {
+          "$ref": "#/definitions/Adult"
+        },
+        "gyn": {
+          "$ref": "#/definitions/Adult"
+        },
+        "sti_testing": {
+          "$ref": "#/definitions/Adult"
+        },
+        "pharmacy": {
+          "$ref": "#/definitions/Adult"
+        },
+        "diabetic_education": {
+          "$ref": "#/definitions/Adult"
+        },
+        "wic": {
+          "$ref": "#/definitions/Adult"
+        },
+        "behavioral_health": {
+          "$ref": "#/definitions/Adult"
+        },
+        "safe_place": {
+          "$ref": "#/definitions/Adult"
+        },
+        "special_hours_notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "address",
+        "care_type",
+        "city",
+        "health_center",
+        "health_center_code",
+        "latitude",
+        "longitude",
+        "neighborhood",
+        "phone",
+        "state",
+        "street_name",
+        "sufx",
+        "zipcode"
+      ],
+      "title": "HealthcareElement"
+    },
+    "Adult": {
+      "type": "string",
+      "enum": [
+        "No",
+        "Yes",
+        "no"
+      ],
+      "title": "Adult"
+    },
+    "City": {
+      "type": "string",
+      "enum": [
+        "CINCINNATI"
+      ],
+      "title": "City"
+    },
+    "DayOpen": {
+      "type": "string",
+      "enum": [
+        "8:00 AM",
+        "7:30 AM",
+        "10:00 AM",
+        "7:00 AM",
+        "7:45 AM",
+        "9:00 AM"
+      ],
+      "title": "DayOpen"
+    },
+    "State": {
+      "type": "string",
+      "enum": [
+        "OH"
+      ],
+      "title": "State"
+    },
+    "Sufx": {
+      "type": "string",
+      "enum": [
+        "AV",
+        "ST",
+        "RD",
+        "DR",
+        "PL"
+      ],
+      "title": "Sufx"
+    }
+  }
+}

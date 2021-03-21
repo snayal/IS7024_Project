@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Home page";
     var properties = (QuickType.Property[])ViewData["Property"];
+  
+  
 
 }
 
@@ -17,7 +19,7 @@
 
 
 <div class="text-center">
-  
+
     <table>
         <tr>
             <th>Project Type</th>
@@ -38,29 +40,32 @@
             <th>Community Council Neighborhood</th>
             <th>Agreement</th>
         </tr>
-        @{ 
+        @{
             foreach (QuickType.Property property in properties)
             {
                 <tr>
-                <td>@property.ProjectType</td>
-                <td>@property.ProjectNo</td>
-                <td>@property.ProjectCategory</td>
-                <td>@property.ProgramType</td>
-                <td>@property.OrganizationLegalName</td>
-                <td>@property.ProjectName</td>
-                <td>@property.ApprovedByCityCouncil</td>
-                <td>@property.TotalProjectCostEst</td>
-                <td>@property.TotalFundingAllSourcesEst</td>
-                <td>@property.EstProgramTotalValue</td>
-                <td>@property.SiteStreetAddress</td>
-                <td>@property.ZipCode</td>
-                <td>@property.Longitude</td>
-                <td>@property.Latitude</td>
-                <td>@property.Neighborhood</td>
-                <td>@property.CommunityCouncilNeighborhood</td>
-                <td>@property.AgreementExecutedByCompany</td>
-                </tr> 
+                    <td>@property.ProjectType</td>
+                    <td>@property.ProjectNo</td>
+                    <td>@property.ProjectCategory</td>
+                    <td>@property.ProgramType</td>
+                    <td>@property.OrganizationLegalName</td>
+                    <td>@property.ProjectName</td>
+                    <td>@property.ApprovedByCityCouncil</td>
+                    <td>@property.TotalProjectCostEst</td>
+                    <td>@property.TotalFundingAllSourcesEst</td>
+                    <td>@property.EstProgramTotalValue</td>
+                    <td>@property.SiteStreetAddress</td>
+                    <td>@property.ZipCode</td>
+                    <td>@property.Longitude</td>
+                    <td>@property.Latitude</td>
+                    <td>@property.Neighborhood</td>
+                    <td>@property.CommunityCouncilNeighborhood</td>
+                    <td>@property.AgreementExecutedByCompany</td>
+                </tr>
+
             }
-          }
+        }
     </table>
-</div>
+    <hr />
+
+   
