@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS7024_Project", "IS7024_Project.csproj", "{7195F53E-6F93-4966-95F4-6A88280DF2DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2494B80F-E221-4637-B07A-D399BEB018A3}"
+	ProjectSection(SolutionItems) = preProject
+		CrimeSchema.json = CrimeSchema.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
