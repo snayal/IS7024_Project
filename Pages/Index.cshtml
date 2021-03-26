@@ -1,111 +1,126 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
     var properties = (QuickType.Property[])ViewData["Property"];
-    var crimes = (QuickTypeCrimes.Crimes[])ViewData["Crime"];
-  
+
+    var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+   /* var crimes = (QuickTypeCrimes.Crime[])ViewData["Crime"]; */
+
 }
 
-<div class="text-center">
-    <h1 class="display-4"><strong>Propety Investment</strong></h1>
-    <img src="/images/neighborhood1.jpg" />
+<div id="menu" class="text-center">
+    <h1 id="myHeader">Property Investment</h1>
+
+    <img src="/images/neighborhood1.jpg" height="300" width="800" />
     <hr />
 
 </div>
 
+<hr />
 
+<form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
+
+    <label> Property </label>
+    <input type="text" name="project_type" />
+    <input type="submit" value="Search by Property Type" />
+</form>
+
+<hr />
+
+<form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
+    <label for="Property">Property</label>
+    <input type="text" name="neighborhood">
+    <input type="submit" value="Search Propery by Neighborhood">
+</form>
+
+<hr />
+
+<form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">
+    <label for="healthcare">Healthcare</label>
+    <input type="text" name="neighborhood">
+    <input type="submit" value="Search Healthcare by Neighborhood">
+</form>
+
+<br />
+
+
+<select name="PropertyType">
+    <option value="OFFICE" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">OFFICE</option>
+    <option value="RESIDENTIAL">RESIDENTIAL</option>
+    <option value="MIXED USE">MIXED USE</option>
+    <option value="Industrial">Industrial</option>
+    <option value="Undetermined">Undetermined</option>
+    <option value="Retail">Retail</option>
+    <option value="Hotel">Hotel</option>
+    <option value="PublicInfrastructure">PublicInfrastructure</option>
+</select>
+<br />
+<hr />
 <div class="text-center">
 
-    <table>
+
+    <table class="table table-bordered">
         <tr>
             <th>Project Type</th>
-            <th>Project Number</th>
-            <th>Category</th>
-            <th>Program Type</th>
-            <th>Organization</th>
             <th>Project Name</th>
-            <th>Approved By</th>
-            <th>Total Cost</th>
-            <th>Total Funding</th>
-            <th>Total Value</th>
             <th>Street Address</th>
             <th>Zip Code</th>
-            <th>Longitude</th>
-            <th>Latitude</th>
             <th>Neighborhood</th>
             <th>Community Council Neighborhood</th>
-            <th>Agreement</th>
         </tr>
+
         @{
             foreach (QuickType.Property property in properties)
             {
                 <tr>
                     <td>@property.ProjectType</td>
-                    <td>@property.ProjectNo</td>
-                    <td>@property.ProjectCategory</td>
-                    <td>@property.ProgramType</td>
-                    <td>@property.OrganizationLegalName</td>
                     <td>@property.ProjectName</td>
-                    <td>@property.ApprovedByCityCouncil</td>
-                    <td>@property.TotalProjectCostEst</td>
-                    <td>@property.TotalFundingAllSourcesEst</td>
-                    <td>@property.EstProgramTotalValue</td>
                     <td>@property.SiteStreetAddress</td>
                     <td>@property.ZipCode</td>
-                    <td>@property.Longitude</td>
-                    <td>@property.Latitude</td>
                     <td>@property.Neighborhood</td>
                     <td>@property.CommunityCouncilNeighborhood</td>
-                    <td>@property.AgreementExecutedByCompany</td>
                 </tr>
+
             }
         }
     </table>
-</div>
+
     <hr />
 
-    <div class="text-center">
+    <table class="table table-bordered">
+        <tr>
+            <th>Healthcare Center</th>
+            <th>Address</th>
+            <th>ZipCode</th>
+            <th>Care Type</th>
+            <th>Neighborhood</th>
+            <th>Pharmacy</th>
+            <th>Phone</th>
+        </tr>
+        @{
+            foreach (QuickType1.Healthcare healthcare in healthcares)
+            {
+                <tr>
+                    <td>@healthcare.HealthCenter</td>
+                    <td>@healthcare.Address</td>
+                    <td>@healthcare.Zipcode</td>
+                    <td>@healthcare.CareType</td>
+                    <td>@healthcare.Neighborhood</td>
+                    <td>@healthcare.Pharmacy</td>
+                    <td>@healthcare.Phone</td>
 
-        <table>
-            <tr>
-                <th>Instance ID</th>
-                <th>Incident No</th>
-                <th>Date Reported</th>
-                <th>Location</th>
-                <th>Day of Week</th>
-                <th>Area</th>
-                <th>Neighborhood</th>
-                <th>Weapons</th>
-                <th>Address</th>
-                <th>Victim Age</th>
-                <th>Victime Gender</th>
-                <th>Total Number Victims</th>
-                <th>Zip Code</th>
-                <th>Total Suspects</th>
-                <th>Theft Code</th>
-            </tr>
-            @{
-                foreach (QuickTypeCrimes.Crimes crime in crimes)
-                {
-                    <tr>
-                        <td>@crime.Instanceid</td>
-                        <td>@crime.IncidentNo</td>
-                        <td>@crime.DateReported</td>
-                        <td>@crime.Location</td>
-                        <td>@crime.Dayofweek</td>
-                        <td>@crime.RptArea</td>
-                        <td>@crime.Neighborhood</td>
-                        <td>@crime.Weapons</td>
-                        <td>@crime.AddressX</td>
-                        <td>@crime.VictimAge</td>
-                        <td>@crime.VictimGender</td>
-                        <td>@crime.Totalnumbervictims</td>
-                        <td>@crime.Zip</td>
-                        <td>@crime.Totalsuspects</td>
-                        <td>@crime.TheftCode</td>
-                    </tr>
-                }
+                </tr>
+
             }
-        </table>
-    </div>
+        }
+    </table>
+
+
+</div>
+
+
+
+<hr />
+
