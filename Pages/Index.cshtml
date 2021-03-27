@@ -87,55 +87,9 @@
         }
     </table>
 
-    <hr />
-
-    
-
-
+   
 </div>
-<div>
-<table>
-<tr>
-<th>Instance ID</th>
-<th>Incident No</th>
-<th>Date Reported</th>
-<th>Location</th>
-<th>Day of Week</th>
-<th>Area</th>
-<th>Neighborhood</th>
-<th>Weapons</th>
-<th>Address</th>
-<th>Victim Age</th>
-<th>Victime Gender</th>
-<th>Total Number Victims</th>
-<th>Zip Code</th>
-<th>Total Suspects</th>
-<th>Theft Code</th>
-</tr>
-@{
-foreach (QuickTypeCrimes.Crimes crime in crimes)
-{
-<tr>
-<td>@crime.Instanceid</td>
-<td>@crime.IncidentNo</td>
-<td>@crime.DateReported</td>
-<td>@crime.Location</td>
-<td>@crime.Dayofweek</td>
-<td>@crime.RptArea</td>
-<td>@crime.Neighborhood</td>
-<td>@crime.Weapons</td>
-<td>@crime.AddressX</td>
-<td>@crime.VictimAge</td>
-<td>@crime.VictimGender</td>
-<td>@crime.Totalnumbervictims</td>
-<td>@crime.Zip</td>
-<td>@crime.Totalsuspects</td>
-<td>@crime.TheftCode</td>
-</tr>
-}
-}
-</table>
+   
 
-</div>
 <hr />
 
