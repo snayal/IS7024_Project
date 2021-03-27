@@ -36,22 +36,9 @@ namespace IS7024_Project.Pages
 
 
                 var jsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
-
-
-
-
-                IDictionary<long, QuickType.Property> allZipCodes = new Dictionary<long, QuickType.Property>();
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
 
                 QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
-
-                foreach (QuickType.Property propertyZipcode in propertyZipCodes)
-                {
-
-                    Console.WriteLine(propertyZipcode);
-                }
-
-
 
                 string healthcareJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
