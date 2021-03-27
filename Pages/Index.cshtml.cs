@@ -72,35 +72,7 @@ namespace IS7024_Project.Pages
                 }
             }
 
-
-            using (var webClient1 = new WebClient())
-            {
-                string jsonString = webClient1.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
-                JSchema schema1 = JSchema.Parse(System.IO.File.ReadAllText("HealthcareSchema.json"));
-                JArray jsonArray1 = JArray.Parse(jsonString);
-                IList<string> validationEvents = new List<string>();
-                if (jsonArray1.IsValid(schema1, out validationEvents))
-                {
-                    var healthcare = Healthcare.FromJson(jsonString);
-                    ViewData["Healthcare"] = healthcare;
-                }
-                else
-                {
-                    foreach (string evt in validationEvents)
-                    {
-                        Console.WriteLine(evt);
-                    }
-                    ViewData["Healthcare"] = new List<Healthcare>();
-                }
-            }
-
-           
-
-
-
-
         }
-
        
     }
 }

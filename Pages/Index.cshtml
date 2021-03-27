@@ -5,7 +5,7 @@
 
     var properties = (QuickType.Property[])ViewData["Property"];
 
-    var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+   /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
 }
 
 <div class="text-center">
@@ -47,11 +47,7 @@
 <select name="PropertyType">
     <option value="OFFICE" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">OFFICE</option>
     <option value="RESIDENTIAL">RESIDENTIAL</option>
-    <option value="MIXED USE">MIXED USE</option>
-    <option value="Industrial">Industrial</option>
-    <option value="Undetermined">Undetermined</option>
-    <option value="Retail">Retail</option>
-    <option value="Hotel">Hotel</option>
+    <option value="MIXED USE">MIXED USE</option>    
     <option value="PublicInfrastructure">PublicInfrastructure</option>
 </select>
 <br />
@@ -87,34 +83,7 @@
 
     <hr />
 
-    <table class="table table-bordered">
-        <tr>
-            <th>Healthcare Center</th>
-            <th>Address</th>
-            <th>ZipCode</th>
-            <th>Care Type</th>
-            <th>Neighborhood</th>
-            <th>Pharmacy</th>
-            <th>Phone</th>
-        </tr>
-        @{
-            foreach (QuickType1.Healthcare healthcare in healthcares)
-            {
-                <tr>
-                    <td>@healthcare.HealthCenter</td>
-                    <td>@healthcare.Address</td>
-                    <td>@healthcare.Zipcode</td>
-                    <td>@healthcare.CareType</td>
-                    <td>@healthcare.Neighborhood</td>
-                    <td>@healthcare.Pharmacy</td>
-                    <td>@healthcare.Phone</td>
-
-                </tr>
-
-            }
-        }
-    </table>
-
+    
 
 
 </div>
