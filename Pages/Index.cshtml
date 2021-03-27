@@ -37,9 +37,9 @@
 
 <hr />
 
-<form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">
+<form name ="search" method ="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">
     <label for="healthcare">Healthcare</label>
-    <input type="text" name="neighborhood">
+    <input type="text"  name="neighborhood">
     <input type="submit" value="Search Healthcare by Neighborhood">
 </form>
 
@@ -49,11 +49,7 @@
 <select name="PropertyType">
     <option value="OFFICE" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">OFFICE</option>
     <option value="RESIDENTIAL">RESIDENTIAL</option>
-    <option value="MIXED USE">MIXED USE</option>
-    <option value="Industrial">Industrial</option>
-    <option value="Undetermined">Undetermined</option>
-    <option value="Retail">Retail</option>
-    <option value="Hotel">Hotel</option>
+    <option value="MIXED USE">MIXED USE</option>    
     <option value="PublicInfrastructure">PublicInfrastructure</option>
 </select>
 <br />
@@ -63,7 +59,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Project Type</th>
+            <th>Project Type</th>          
             <th>Project Name</th>
             <th>Street Address</th>
             <th>Zip Code</th>
@@ -75,21 +71,22 @@
             foreach (QuickType.Property property in properties)
             {
                 <tr>
-                    <td>@property.ProjectType</td>
+                    <td>@property.ProjectType</td>                  
                     <td>@property.ProjectName</td>
                     <td>@property.SiteStreetAddress</td>
                     <td>@property.ZipCode</td>
                     <td>@property.Neighborhood</td>
-                    <td>@property.CommunityCouncilNeighborhood</td>
+                    <td>@property.CommunityCouncilNeighborhood</td>                
                 </tr>
 
             }
         }
     </table>
 
-   
+    <hr />
+
+    
+
+
 </div>
-   
-
 <hr />
-
