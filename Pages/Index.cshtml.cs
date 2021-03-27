@@ -33,7 +33,7 @@ namespace IS7024_Project.Pages
             using (var webClient = new WebClient())
             {
 
-                
+
 
                 var jsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
 
@@ -43,7 +43,7 @@ namespace IS7024_Project.Pages
                 IDictionary<long, QuickType.Property> allZipCodes = new Dictionary<long, QuickType.Property>();
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
 
-                QuickType.Property[] propertyZipCodes =  QuickType.Property.FromJson(propertyJson);
+                QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
 
                 foreach (QuickType.Property propertyZipcode in propertyZipCodes)
                 {
@@ -51,7 +51,7 @@ namespace IS7024_Project.Pages
                     Console.WriteLine(propertyZipcode);
                 }
 
-              
+
 
                 string healthcareJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
@@ -73,7 +73,7 @@ namespace IS7024_Project.Pages
             }
 
         }
-       
+
     }
 }
 
