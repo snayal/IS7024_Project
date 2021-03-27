@@ -22,17 +22,24 @@ namespace IS7024_Project.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(string jsonSting)
         {
-            
+            using (var webClient = new WebClient())
+            {
 
-                string jsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+
+               
+                string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+
+                QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
+
+               
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
-                JArray jsonArray = JArray.Parse(jsonString);
+                JArray jsonArray = JArray.Parse(propertyJson);
                 IList<string> validationEvents = new List<string>();
                 if (jsonArray.IsValid(schema, out validationEvents))
                 {
-                    var property = Property.FromJson(jsonString);
+                    var property = Property.FromJson(propertyJson);
                     ViewData["Property"] = property;
                 }
                 else
