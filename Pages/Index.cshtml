@@ -13,19 +13,18 @@
 
     <img src="/images/neighborhood1.jpg" height="300" width="800" />
     <hr />
-
 </div>
+<table class="table table-borderless">
 
-<hr />
+
+
+</table>
 
 <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
-
     <label> Property </label>
     <input type="text" name="project_type" />
     <input type="submit" value="Search by Property Type" />
 </form>
-
-<hr />
 
 <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
     <label for="Property">Property</label>
@@ -33,28 +32,14 @@
     <input type="submit" value="Search Propery by Neighborhood">
 </form>
 
-<hr />
-
-<form name ="search" method ="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">
-    <label for="healthcare">Healthcare</label>
-    <input type="text"  name="neighborhood">
-    <input type="submit" value="Search Healthcare by Neighborhood">
+<form name ="search" method ="get" action="https://data.cincinnati-oh.gov/resource/k59e-2pvf.json">
+    <label for="CrimeReported">Crim Reported</label>
+    <input type="text"  name="zip">
+    <input type="submit" value="Search Crime Incidents by ZipCode">
 </form>
-
-<br />
-
-
-<select name="PropertyType">
-    <option value="OFFICE" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">OFFICE</option>
-    <option value="RESIDENTIAL">RESIDENTIAL</option>
-    <option value="MIXED USE">MIXED USE</option>    
-    <option value="PublicInfrastructure">PublicInfrastructure</option>
-</select>
-<br />
+<br /><br />
 <hr />
 <div class="text-center">
-
-
     <table class="table table-bordered">
         <tr>
             <th>Project Type</th>          
@@ -64,7 +49,6 @@
             <th>Neighborhood</th>
             <th>Community Council Neighborhood</th>
         </tr>
-
         @{
             foreach (QuickType.Property property in properties)
             {
@@ -76,16 +60,9 @@
                     <td>@property.Neighborhood</td>
                     <td>@property.CommunityCouncilNeighborhood</td>                
                 </tr>
-
             }
         }
     </table>
-
     <hr />
-
-    
-
-
 </div>
-<hr />
 
