@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using QuickType;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-using QuickType1;
+
 
 namespace IS7024_Project.Pages
 {
@@ -40,20 +40,12 @@ namespace IS7024_Project.Pages
 
 
 
-                IDictionary<long, QuickType.Property> allZipCodes = new Dictionary<long, QuickType.Property>();
+               
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
 
                 QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
 
-                foreach (QuickType.Property propertyZipcode in propertyZipCodes)
-                {
-
-                    Console.WriteLine(propertyZipcode);
-                }
-
-
-
-                string healthcareJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
+               
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
                 JArray jsonArray = JArray.Parse(propertyJson);
                 IList<string> validationEvents = new List<string>();
