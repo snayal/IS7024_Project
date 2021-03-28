@@ -52,7 +52,8 @@
         },
         "zip_code": {
           "type": "string",
-          "format": "integer"
+          "format": "integer",
+          "pattern": "[0-9]{5}(-[0-9]{4})?"
         },
         "longitude": {
           "type": "string"
@@ -61,7 +62,8 @@
           "type": "string"
         },
         "neighborhood": {
-          "type": "string"
+          "type": "string",
+          "maxLength": 30
         },
         "community_council_neighborhood": {
           "type": "string"
