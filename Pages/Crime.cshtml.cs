@@ -7,25 +7,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-using QuickType1;
+using QuickTypeCrimes;
 
 namespace IS7024_Project.Pages
 {
-    public class HealthcareModel : PageModel
+    public class CrimeModel : PageModel
     {
         public void OnGet()
         {
             using (var webClient = new WebClient())
             {
 
-                string healthcareJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
-                JSchema healthcareSchema = JSchema.Parse(System.IO.File.ReadAllText("HealthcareSchema.json"));
-                JArray healthcareArray = JArray.Parse(healthcareJSON);
+                string crimeJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/k59e-2pvf.json");
+                JSchema crimeSchema = JSchema.Parse(System.IO.File.ReadAllText("CrimeSchema.json"));
+                JArray crimeArray = JArray.Parse(crimeJSON);
                 IList<string> validationEvents = new List<string>();
-                if (healthcareArray.IsValid(healthcareSchema, out validationEvents))
+                if (crimeArray.IsValid(crimeSchema, out validationEvents))
                 {
-                    var healthcare = Healthcare.FromJson(healthcareJSON);
-                    ViewData["Healthcare"] = healthcare;
+                    var crime = Crime.FromJson(crimeJSON);
+                    ViewData["Crime"] = crime;
                 }
                 else
                 {
@@ -33,7 +33,7 @@ namespace IS7024_Project.Pages
                     {
                         Console.WriteLine(evt);
                     }
-                    ViewData["Healthcare"] = new QuickType1.Healthcare[0];
+                    ViewData["Crime"] = new QuickTypeCrimes.Crime[0];
                 }
             }
         }

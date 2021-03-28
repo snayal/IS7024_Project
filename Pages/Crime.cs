@@ -4,7 +4,7 @@
 //
 //    using QuickTypeCrimes;
 //
-//    var crimes = Crimes.FromJson(jsonString);
+//    var crime = Crime.FromJson(jsonString);
 
 namespace QuickTypeCrimes
 {
@@ -15,7 +15,7 @@ namespace QuickTypeCrimes
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class Crimes
+    public partial class Crime
     {
         [JsonProperty("instanceid")]
         public string Instanceid { get; set; }
@@ -23,11 +23,11 @@ namespace QuickTypeCrimes
         [JsonProperty("incident_no")]
         public string IncidentNo { get; set; }
 
-        [JsonProperty("date_reported", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTimeOffset? DateReported { get; set; }
+        [JsonProperty("date_reported")]
+        public DateTimeOffset DateReported { get; set; }
 
-        [JsonProperty("date_from", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTimeOffset? DateFrom { get; set; }
+        [JsonProperty("date_from")]
+        public DateTimeOffset DateFrom { get; set; }
 
         [JsonProperty("date_to", NullValueHandling = NullValueHandling.Ignore)]
         public DateTimeOffset? DateTo { get; set; }
@@ -83,7 +83,7 @@ namespace QuickTypeCrimes
         [JsonProperty("date_of_clearance", NullValueHandling = NullValueHandling.Ignore)]
         public DateTimeOffset? DateOfClearance { get; set; }
 
-        [JsonProperty("hour_from", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("hour_from")]
         public string HourFrom { get; set; }
 
         [JsonProperty("hour_to", NullValueHandling = NullValueHandling.Ignore)]
@@ -140,7 +140,7 @@ namespace QuickTypeCrimes
 
     public enum Clsd { BProsecutionDeclined, DVictimRefusedToCooperate, FClearedByArrestAdult, GClearedByArrestJuvenile, HWarrantIssued, IInvestigationPending, JClosed, KUnfounded, ZEarlyClosed };
 
-    public enum Neighborhood { Avondale, AvondaleNorthAvondale, BondHill, CampWashington, Clifton, CollegeHill, Cuf, Downtown, EastPriceHill, EastWalnutHills, EastWestwood, Hartwell, KennedyHeights, Millvale, MountWashington, MtWashington, NA, NorthAvondalePaddockHills, Oakley, Otr, OverTheRhine, PaddockHills, PleasantRidge, Roselawn, SouthFairmountWestwood, SpringGroveWintonHills, VillagesAtRollHill, WalnutHills, WestEnd, WestPriceHill, Westwood };
+    public enum Neighborhood { Avondale, AvondaleNorthAvondale, BondHill, CampWashington, Clifton, CollegeHill, Cuf, Downtown, EastPriceHill, EastWalnutHills, EastWestwood, Hartwell, KennedyHeights, Millvale, MountWashington, MtWashington, NA, NorthAvondalePaddockHills, Northside, Oakley, Otr, OverTheRhine, PaddockHills, PleasantRidge, Roselawn, SouthFairmountWestwood, SpringGroveWintonHills, VillagesAtRollHill, WalnutHills, WestEnd, WestPriceHill, Westwood };
 
     public enum Dayofweek { Friday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday };
 
@@ -169,14 +169,14 @@ namespace QuickTypeCrimes
         public static implicit operator DstUnion(long Integer) => new DstUnion { Integer = Integer };
     }
 
-    public partial class Crimes
+    public partial class Crime
     {
-        public static Crimes[] FromJson(string json) => JsonConvert.DeserializeObject<Crimes[]>(json, QuickTypeCrimes.Converter.Settings);
+        public static Crime[] FromJson(string json) => JsonConvert.DeserializeObject<Crime[]>(json, QuickTypeCrimes.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Crimes[] self) => JsonConvert.SerializeObject(self, QuickTypeCrimes.Converter.Settings);
+        public static string ToJson(this Crime[] self) => JsonConvert.SerializeObject(self, QuickTypeCrimes.Converter.Settings);
     }
 
     internal static class Converter
@@ -357,6 +357,8 @@ namespace QuickTypeCrimes
                     return Neighborhood.NA;
                 case "NORTH AVONDALE - PADDOCK HILLS":
                     return Neighborhood.NorthAvondalePaddockHills;
+                case "NORTHSIDE":
+                    return Neighborhood.Northside;
                 case "OAKLEY":
                     return Neighborhood.Oakley;
                 case "OTR":
@@ -450,6 +452,9 @@ namespace QuickTypeCrimes
                     return;
                 case Neighborhood.NorthAvondalePaddockHills:
                     serializer.Serialize(writer, "NORTH AVONDALE - PADDOCK HILLS");
+                    return;
+                case Neighborhood.Northside:
+                    serializer.Serialize(writer, "NORTHSIDE");
                     return;
                 case Neighborhood.Oakley:
                     serializer.Serialize(writer, "OAKLEY");

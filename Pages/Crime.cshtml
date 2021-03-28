@@ -1,0 +1,29 @@
+﻿@page
+@model IS7024_Project.Pages.CrimeModel
+@{
+    var crimes = (QuickTypeCrimes.Crime[])ViewData["Crime"];
+}
+
+<div class="text-center">
+    <h1 class="featurette-heading" style="color:crimson">Crime Information</h1>
+    <table class="table table-bordered">
+
+        <tr>
+            <th>Location</th>
+            <th>Neighborhood</th>
+            <th>Address</th>
+            <th>Zip Code</th>
+        </tr>
+        @{
+            foreach (QuickTypeCrimes.Crime crime in crimes)
+            {
+                <tr>
+                    <td>@crime.Location</td>
+                    <td>@crime.CpdNeighborhood</td>
+                    <td>@crime.AddressX</td>
+                    <td>@crime.Zip</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
