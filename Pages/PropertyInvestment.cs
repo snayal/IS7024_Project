@@ -6,23 +6,47 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using QuickType;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace IS7024_Project.Pages
 {
     public class PropertyInvestment : PageModel
     {
-        public object MyProperty { get; set; }
+
+        public object Jschema { get; private set; }
 
         public void OnGet()
         {
 
+
+
+
             using (var webClient = new WebClient())
             {
-                string propertyJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+                string propertyJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+
+                string ZipJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+                string NeighJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+                string streetJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
 
                 Property[] property = Property.FromJson(propertyJsonString);
                 ViewData["MyProperty"] = property;
             }
+
+
         }
     }
 }
+
+
+
+	
+
+	
+
+		
+
+
+
+		

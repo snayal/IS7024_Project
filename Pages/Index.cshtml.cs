@@ -42,6 +42,7 @@ namespace IS7024_Project.Pages
                 IList<string> validationEvents = new List<string>();
                 if (jsonArray.IsValid(schema, out validationEvents))
                 {
+                    
                     var property = Property.FromJson(propertyJson);
                     ViewData["Property"] = property;
 
@@ -59,6 +60,7 @@ namespace IS7024_Project.Pages
             }
 
         }
+
 
     }
 }
