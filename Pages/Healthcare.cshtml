@@ -1,0 +1,33 @@
+﻿@page
+@model IS7024_Project.Pages.HealthcareModel
+@{
+    var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Healthcare Information</h1>
+    <table class="table table-bordered">
+
+        <tr>
+            <th>Healthcare Center</th>
+            <th>Address</th>
+            <th>Street Name</th>
+            <th>City</th>
+            <th>Zip Code</th>
+            <th>Neighborhood</th>
+        </tr>
+        @{
+            foreach (QuickType1.Healthcare healthcare in healthcares)
+            {
+                <tr>
+                    <td>@healthcare.HealthCenter</td>
+                    <td>@healthcare.Address</td>
+                    <td>@healthcare.StreetName</td>
+                    <td>@healthcare.City</td>
+                    <td>@healthcare.Zipcode</td>
+                    <td>@healthcare.Neighborhood</td>
+                </tr>
+            }
+        }
+    </table>
+</div>

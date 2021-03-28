@@ -4,8 +4,7 @@
     ViewData["Title"] = "Home page";
 
     var properties = (QuickType.Property[])ViewData["Property"];
-
-    /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
+    //var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
 }
 <main role="main">
     <div class="text-center">
@@ -102,10 +101,10 @@
         <div class="row">
             <div class="col-md-5 order-2">
                 <h2 class="featurette-heading" style="color:crimson" text-align: center><br /><br />Search Healthcare </h2>
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json?zip">
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json?city">
                     <label for="Healthcare"></label>
-                    <input type="text" name="zip">
-                    <input type="submit" value="ZipCode">
+                    <input type="text" name="city">
+                    <input type="submit" value="City">
                 </form>
             </div>
 
