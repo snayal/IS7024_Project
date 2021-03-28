@@ -7,8 +7,6 @@
 
     /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
 }
-
-
 <main role="main">
     <div class="text-center">
         <h1 class="featurette-heading" style="color:crimson">Property Investment</h1>
@@ -24,19 +22,19 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/images/neighborhood1.jpg" class="d-block w-100" alt="Home" width="400" height="300">
-                    <div class="carousel-caption d-none d-md-block" >
+                    <img src="/images/neighborhood1.jpg" class="d-block w-100" alt="Home" width="500" height="300">
+                    <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-center">Residential Property</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/office4.jpeg" class="d-block w-100" alt="Office" width="400" height="300">
+                    <img src="/images/office4.jpeg" class="d-block w-100" alt="Office" width="500" height="300">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-center">Office Property </h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/hospital2.jpeg" class="d-block w-100" alt="Healthcare" width="400" height="300">
+                    <img src="/images/hospital2.jpeg" class="d-block w-100" alt="Healthcare" width="500" height="300">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-center">Healthcare Property</h5>
                     </div>
@@ -59,89 +57,65 @@
         </div>
     </div>
     <hr /><br />
-          <div class="container boxdefinition">
-              <div class="row">
-                  <div class="col-md-5 order-md-2">
-                      <h2 class="featurette-heading" style="color:crimson"><br />Search Property</h2>
-                      <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
-                          <label> </label>
-                          <input type="text" name="project_type" />
-                          <input type="submit" value="Type" />
-                      </form>
-                      <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
-                          <label for="Property"></label>
-                          <input type="text" name="neighborhood">
-                          <input type="submit" value="Neighborhood">
-                      </form>
-                      <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json">
-                          <label for="Property"></label>
-                          <input type="text" name="zip_code">
-                          <input type="submit" value="Zipcode">
-                      </form>
-                  </div>
-                  <br /> <hr />
-                  <div class="col-md-7 order-md-1">
-                      <img class="featurette-image img-fluid mx-auto" src="~/images/Property-Type-Image.jpg" alt="house" width="500" height="250">
-                  </div>
-              </div>
-              <br /><hr />
-              <div class="row">
-                  <div class="col-md-5">
-                      <h2 class="featurette-heading" style="color:crimson" ; text-align: center><br /><br />Search Crime Reported</h2>
-                      <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/k59e-2pvf.json">
-                          <label for="CrimeReported"></label>
-                          <input type="text" name="zip">
-                          <input type="submit" value="ZipCode">
-                      </form>
-                  </div>
+    <div class="container boxdefinition">
+        <div class="row">
+            <div class="col-md-5 order-md-2">
+                <h2 class="featurette-heading" style="color:crimson"><br />Search Property</h2>
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type">
+                    <label> </label>
+                    <input type="text" name="project_type" />
+                    <input type="submit" value="Type" />
+                </form>
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?neighborhood">
+                    <label for="Property"></label>
+                    <input type="text" name="neighborhood">
+                    <input type="submit" value="Neighborhood">
+                </form>
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?zip_code">
+                    <label for="Property"></label>
+                    <input type="text" name="zip_code">
+                    <input type="submit" value="Zipcode">
+                </form>
+            </div>
+            <br /> <hr />
+            <div class="col-md-7 order-md-1">
+                <img class="featurette-image img-fluid mx-auto" src="~/images/Property-Type-Image.jpg" alt="house" width="500" height="250">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row">
+            <div class="col-md-5">
+                <h2 class="featurette-heading" style="color:crimson" ; text-align: center><br /><br />Search Crime Reported</h2>
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/k59e-2pvf.json?zip">
+                    <label for="CrimeReported"></label>
+                    <input type="text" name="zip">
+                    <input type="submit" value="ZipCode">
+                </form>
+            </div>
 
-                  <div class="col-md-7">
-                      <img class="featurette-image img-fluid mx-auto" src="~/images/safeNeighborhood.jpg" alt="house" width="500" height="250">
-                  </div>
-              </div>
-              <br /><hr />
+            <div class="col-md-7">
+                <img class="featurette-image img-fluid mx-auto" src="~/images/safeNeighborhood.jpg" alt="house" width="500" height="250">
+            </div>
+        </div>
+        <br /><hr />
 
-              <div class="row">
-                  <div class="col-md-5 order-2">
-                      <h2 class="featurette-heading" style="color:crimson" text-align: center><br /><br />Search Healthcare </h2>
-                      <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json">
-                          <label for="Healthcare"></label>
-                          <input type="text" name="zip">
-                          <input type="submit" value="ZipCode">
-                      </form>
-                  </div>
+        <div class="row">
+            <div class="col-md-5 order-2">
+                <h2 class="featurette-heading" style="color:crimson" text-align: center><br /><br />Search Healthcare </h2>
+                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json?zip">
+                    <label for="Healthcare"></label>
+                    <input type="text" name="zip">
+                    <input type="submit" value="ZipCode">
+                </form>
+            </div>
 
-                  <div class="col-md-7 order-1">
-                      <img class="featurette-image img-fluid mx-auto" src="/images/hospital2.jpeg" alt="home" width="500" height="250">
-                  </div>
-              </div>
-          </div>
-</main><hr /><br />
+            <div class="col-md-7 order-1">
+                <img class="featurette-image img-fluid mx-auto" src="/images/hospital2.jpeg" alt="home" width="500" height="250">
+            </div>
+        </div>
+    </div>
+</main>
+<hr />
+<br />
 
-<div class="text-center">
-    <table class="table table-bordered">
-        <tr>
-            <th>Project Type</th>
-            <th>Project Name</th>
-            <th>Street Address</th>
-            <th>Zip Code</th>
-            <th>Neighborhood</th>
-            <th>Community Council Neighborhood</th>
-        </tr>
-        @{
-            foreach (QuickType.Property property in properties)
-            {
-                <tr>
-                    <td>@property.ProjectType</td>
-                    <td>@property.ProjectName</td>
-                    <td>@property.SiteStreetAddress</td>
-                    <td>@property.ZipCode</td>
-                    <td>@property.Neighborhood</td>
-                    <td>@property.CommunityCouncilNeighborhood</td>
-                </tr>
-            }
-        }
-    </table>
-    <hr />
-</div>
 

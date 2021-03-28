@@ -1,0 +1,33 @@
+﻿@page
+@model IS7024_Project.Pages.PropertyInvestment
+@{
+    ViewData["Title"] = "Property";
+
+    var properties = (QuickType.Property[])ViewData["Property"];
+    var MyProperty = (QuickType.Property[])ViewData["MyProperty"];
+
+    /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
+}
+
+
+<div class="text-center">
+    <table class="table table-bordered">
+        <tr>
+            <th>Project Type</th>
+            <th>Neighborhood</th>
+            <th>Street Address</th>
+            <th>Zip Code</th>
+        </tr>
+        @{
+            foreach (QuickType.Property property in MyProperty)
+            {
+                <tr>
+                    <td>@property.ProjectType</td>
+                    <td>@property.Neighborhood</td>
+                    <td>@property.SiteStreetAddress</td>
+                    <td>@property.ZipCode</td>
+                </tr>
+            }
+        }
+    </table>
+</div>

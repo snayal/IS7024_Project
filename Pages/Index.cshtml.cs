@@ -27,16 +27,13 @@ namespace IS7024_Project.Pages
         {
             _logger = logger;
         }
-
+        public object MyProperty { get; private set; }
         public void OnGet(string jsonSting)
         {
             using (var webClient = new WebClient())
-            {
-
-
-               
+            {             
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
-
+                string propertyResJason = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
                 QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
 
                
@@ -47,6 +44,9 @@ namespace IS7024_Project.Pages
                 {
                     var property = Property.FromJson(propertyJson);
                     ViewData["Property"] = property;
+
+                    var propertyResidential = Property.FromJson(propertyResJason);
+                    ViewData["PropertyRes"] = propertyResidential;
                 }
                 else
                 {
@@ -62,4 +62,4 @@ namespace IS7024_Project.Pages
 
     }
 }
-    
+
