@@ -68,12 +68,27 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 **Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati**
 
-- **Given**  Street address/ town
+- **Given**  Type
 
-- **When**  Residential
+- **When**  RESIDENTIAL
 
-- **Then**  receive list of Residential property details
+- **Then**  receive list of Residential property details with address
 
+**Example 1.2**
+
+- ***Given***  Neighborhood 
+
+- ***When***  WALNUT HILLS
+
+- ***Then***  List of properties at given Neighborhood 
+
+**Example 1.3**
+
+- ***Given***  Zipcode 
+
+- ***When***  45205
+
+- ***Then***  List of properties at given zipcode
 
 ### Requirement 2: 
 
@@ -97,22 +112,22 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 **search safe neighborhood for property investment**
 
-- **Given**  Neighborhood
+- **Given**  Zipcode Search box
 
-- **When**  Crime incident
+- **When**  45202
 
--  **Then**  List of crime reported in the given neighborhood 
+-  **Then**  List of crime reported in the given zipcode
 
 
 ##### Example 1.2 
 
 **Search for healthcare centers around neighborhood street address**
 
-- **Given**   Neighborhood address
+- **Given**   Zipcode
 
-- **When** 	 healthcare centers
+- **When** 	 45204
 
-- **Then** list of healthcare centers in the given neighborhood 
+- **Then** list of healthcare centers in the given Zipcode
 
 
 #### Scenario 2:
@@ -134,19 +149,12 @@ As a user interested in investing in a particular property type in Cincinnati,  
 
 **Example 1.1**
 
-- ***Given***  Neighborhood 
+- ***Given***  Zipcode
 
-- ***When***  crime incidents 
+- ***When***  45236
 
 - ***Then*** List of Neighborhoods with reported number of crime incidents 
 
-**Example 1.2**
-
-- ***Given***  Neighborhood 
-
-- ***When***  Healthcare centers 
-
-- ***Then***  List of Neighborhoods near Healthcare centers
 
 ________________________________________
 
