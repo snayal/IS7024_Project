@@ -26,10 +26,10 @@ namespace IS7024_Project.Pages
             {
                 string propertyJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
 
-                string ZipJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
-                string NeighJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
-                string streetJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
-
+                string ZipJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?ZipCode");
+                string NeighJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?Neighborhood");
+                string streetJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?SiteStreetAddress");
+               
                 Property[] property = Property.FromJson(propertyJsonString);
                 ViewData["MyProperty"] = property;
             }
