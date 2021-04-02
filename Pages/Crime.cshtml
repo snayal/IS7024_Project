@@ -9,6 +9,9 @@
     <table class="table table-bordered">
 
         <tr>
+            <th>Date of Report</th>
+            <th>Type</th>
+            <th>Weapon Involvement</th>
             <th>Location</th>
             <th>Neighborhood</th>
             <th>Address</th>
@@ -18,6 +21,9 @@
             foreach (QuickTypeCrimes.Crime crime in crimes)
             {
                 <tr>
+                    <td>@crime.DateReported</td>
+                    <td>@crime.Offense</td>
+                    <td>@crime.Weapons</td>
                     <td>@crime.Location</td>
                     <td>@crime.CpdNeighborhood</td>
                     <td>@crime.AddressX</td>
