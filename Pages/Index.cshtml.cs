@@ -6,7 +6,7 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using QuickType;
+using PropertyQuickType;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
@@ -34,7 +34,7 @@ namespace IS7024_Project.Pages
             {             
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
                 string propertyResJason = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
-                QuickType.Property[] propertyZipCodes = QuickType.Property.FromJson(propertyJson);
+                PropertyQuickType.Property[] propertyZipCodes = PropertyQuickType.Property.FromJson(propertyJson);
 
                
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));

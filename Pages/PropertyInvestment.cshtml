@@ -3,11 +3,13 @@
 @{
     ViewData["Title"] = "Property";
 
-    var properties = (QuickType.Property[])ViewData["Property"];
-    var MyProperty = (QuickType.Property[])ViewData["MyProperty"];
+    var properties = (PropertyQuickType.Property[])ViewData["Property"];
+    var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
 
     /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
 }
+
+
 
 
 <div class="text-center">
@@ -20,7 +22,7 @@
             <th>Zip Code</th>
         </tr>
         @{
-            foreach (QuickType.Property property in MyProperty)
+            foreach (PropertyQuickType.Property property in MyProperty)
             {
                 <tr>
                     <td>@property.ProjectType</td>

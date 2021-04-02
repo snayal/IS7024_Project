@@ -1,24 +1,69 @@
 ﻿@page
 @model IS7024_Project.Pages.testModel
+
+
 @{
+
+    var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
+    var IS7024_project = (IS7024_Project.Pages.testModel[])ViewData["PropertyInvestment"];
+    var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+
 }
 
 
-<select class="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-</select>
+<form action="" method="POST" style="margin-top: 50px;">
+   
+
+    <div class="form-group">
+        <label class="control-label" for="Property">Property</label>
+        <select class="form-control" name="Neighborhoode" id="Neighborhood">
+            <option value="Property">Property</option>
+            <option value="Crime">Crime</option>
+            <option value="Healthcare">Healthcare</option>
+
+
+
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-sm btn-danger" />
+    </div>
+</form>
+
+
+
+
 
 <hr />
-<div class="mb-3">
-    <label for="formGroupExampleInput" class="form-label">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-</div>
 
-<form name="neighborhood" action="process.php" method="post">
-    Neighborhood <input type ="text" name="propertyName"/>
-    <input type="submit" name="submit" value="Name"/>
 
-</form>
+@{ if (Model.isSearchNeighborhood)
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Neighborhood</th>
+                    <th scope="col">ZipCode</th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (PropertyQuickType.Property property in MyProperty)
+            {
+                <tbody>
+                    <tr>
+                        <td>@property.ProjectType</td>
+                        <td>@property.Neighborhood</td>
+                        <td>@property.ZipCode</td>
+
+                    </tr>
+                </tbody>
+
+            }
+        </table>
+
+    }
+}
+
+

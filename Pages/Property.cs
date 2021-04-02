@@ -13,11 +13,11 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using QuickType;
+using PropertyQuickType;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
-namespace QuickType
+namespace PropertyQuickType
 {
     using System;
     using System.Collections.Generic;
@@ -25,7 +25,7 @@ namespace QuickType
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
-    using QuickType;
+    using PropertyQuickType;
     using System.Net;
 
     public partial class Property
@@ -93,12 +93,12 @@ namespace QuickType
 
     public partial class Property
     {
-        public static Property[] FromJson(string json) => JsonConvert.DeserializeObject<Property[]>(json, QuickType.Converter.Settings);
+        public static Property[] FromJson(string json) => JsonConvert.DeserializeObject<Property[]>(json, PropertyQuickType.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Property[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this Property[] self) => JsonConvert.SerializeObject(self, PropertyQuickType.Converter.Settings);
     }
 
     internal static class Converter
