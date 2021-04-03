@@ -33,12 +33,15 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
 
 
+
+
+
 <div class="text-center">
     <h1 class="featurette-heading" style="color:crimson">Healthcare Locations</h1>
     <table id="healthcaretable" class="table table-bordered">
 
         <tr>
-            <th>Healthcare Center</th>
+            <th>Healthcare Center<br />
             <th>Neighborhood</th>
             <th>Services</th>
             <th>Street Name</th>
@@ -50,6 +53,10 @@
             foreach (QuickType1.Healthcare healthcare in healthcares)
             {
                 <tr>
+
+                   
+
+
                     <td>@healthcare.HealthCenter</td>
                     <td>@healthcare.Neighborhood</td>
                     <td>@healthcare.ServicesProvided</td>

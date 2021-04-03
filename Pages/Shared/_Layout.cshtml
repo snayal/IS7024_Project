@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+<head style="background-color:aqua">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Property Investment</title>
@@ -12,7 +12,7 @@
         #myHeader {
             background-color: gold;
             color: slateblue;
-            padding: 10px;
+            padding: 0px;
             text-align: center;
         }
 
@@ -35,14 +35,86 @@
         }
     </style>
 
+    <style>
+        .features {
+            color: orangered;
+            padding: 0px 0px;
+            display: flex;
+            flex-direction: row;
+        }
 
+            .features figure img {
+              
+                width: 0px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+        h1 {
+        }
+
+        header {
+            background-color: white;
+            color: gray;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        footer {
+            background-color:powderblue;
+            color: gray;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        body {
+            background-color:white;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
 
 </head>
-<body style="background-color:gold">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Property Investment</a>
+<body style="background-color:azure" >
+    <header style="background-color:azure">
+
+        <div class="container" >
+            <div class="row" >
+
+                <div class="col" style="left">
+                    <img src="/images/logo6.jpg" alt="logo" width="200" height="100">
+                </div>
+
+                <div class="col order-5" style="text-align">
+                    <h1  class="btn-outline-danger" style="font-family:'Brush Script MT'"> PropertyInvestment</h1>
+                </div>
+
+
+                <div class="col order-5">
+                    
+                </div>
+
+               
+                <div class="col order-5">
+                    <address>
+                        <strong>Address:</strong>
+                        Property Investment<br />                        
+                        Cincinnati, OH-45236
+                    </address>
+                </div>
+            </div>
+        </div>
+
+        <nav  style="background-color:darkgray" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container" style="background-color:gold">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <div class="col-sm" style="margin-left:1px 0px;">
+                        <h3 type="button" class="btn-outline-danger">
+                            Property Investment
+
+                        </h3>
+                    </div>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,36 +122,68 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home Page</a>
+
+                            <a class="navbar-brand" asp-area="" asp-page="/Index">
+                                <div class="col-sm" style="margin-left:0px 0px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        Home
+                                    </h3>
+                                </div>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">About Us</a>
+                            <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
+                                <div class="col-sm" style="margin-left:50px 2px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        Property
+                                    </h3>
+                                </div>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-page="/Crime">
+                                <div class="col-sm" style="margin-left:50px 2px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        Crime Details
+                                    </h3>
+                                </div>
+                            </a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/PropertyInvestment">Property</a>
+                            <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
+                                <div class="col-sm" style="margin-left:50px 2px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        Healthcare
+                                    </h3>
+                                </div>
+                            </a>
+
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Crime">Crime</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Healthcare">Healthcare</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="navbar-brand" asp-area="" asp-page="/Privacy">
+                                <div class="col-sm" style="margin-left:50px 2px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        About Us
+                                    </h3>
+                                </div>
+                            </a>
+
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+
+
     </header>
 
-    
 
-
-    <div class="container">
+    <div class="container" >
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

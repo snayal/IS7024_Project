@@ -7,12 +7,12 @@
     var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
     var IS7024_project = (IS7024_Project.Pages.testModel[])ViewData["PropertyInvestment"];
     var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
-
 }
 
 
+
 <form action="" method="POST" style="margin-top: 50px;">
-   
+
 
     <div class="form-group">
         <label class="control-label" for="Property">Property</label>
@@ -32,17 +32,14 @@
 
 
 
-
-
-<hr />
-
-
 @{ if (Model.isSearchNeighborhood)
     {
-        <table class="table table-bordered">
+        <table id="test" class="table table-warning">
             <thead>
                 <tr>
-                    <th scope="col">Type</th>
+                    <th scope="col">Property Type</th>
+                    <th scope="col">Project Categaroy</th>
+                    <th scope="col">Project cost</th>
                     <th scope="col">Neighborhood</th>
                     <th scope="col">ZipCode</th>
 
@@ -54,6 +51,8 @@
                 <tbody>
                     <tr>
                         <td>@property.ProjectType</td>
+                        <td>@property.ProjectCategory</td>
+                        <td>$@property.TotalProjectCostEst</td>
                         <td>@property.Neighborhood</td>
                         <td>@property.ZipCode</td>
 
