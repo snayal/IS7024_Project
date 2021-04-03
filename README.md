@@ -22,15 +22,17 @@ Do you want to find the best location for your future investment? Do you know ho
  
 - Decide which neighborhood you want to invest
 
+***Search***  Property Details
 
+***View***  Property Details in Cincinnati, OH
 
-***Search***  neighborhood / street address / zipcode
+***Search***   Crime Details 
 
-***View***  Crime incident / healthcare center
+***View***  Crime Details in Cincinnati, OH
 
-***Search***  Project type (Residential / Office / Mixed use)
+***Search***  Healthcare 
 
-***View***  Street Address in Cincinnati 
+***View***  Healthcare Details in Cincinnati, OH
 
 ________________________________________
 ## Data Feeds
@@ -47,48 +49,87 @@ ________________________________________
 
 ### Requirement 1: 
 
-***Search for type of property***
-
+***Search for property***
 
 #### Scenario
 
-As a user interested in investing in a particular property type in Cincinnati,  he/she can search property address based on his/ her selection type. 
-
+As a user interested in investing in a  property  in Cincinnati (OH), he/she can search property deatils by searching Property.
 #### Dependencies
 
-- Different type of Property projects in Cincinnati data are available and accessible.
+- Property details in Cincinnati data are available and accessible.
+-
 
 #### Assumptions
 
 
-***Property type***
+***Search for Crime details***
 
+#### Scenario
+
+As a user interested in crime details in particulat zipcode in Cincinnati (OH), he/she can search crime deatils by searching Crime information.
+#### Dependencies
+
+- Crime details in Cincinnati data are available and accessible.
+
+***Search for Healthcare details***
+
+
+#### Scenario
+
+As a user interested in healthcare location and services detials in Cincinnati (OH), he/she can search Healthcare deatils by searching Healthcare.
+
+#### Dependencies
+
+- Healthcare details in Cincinnati data are available and accessible.
 
 #### Examples 1.1 
 
-**Search for property type : Residential / Office / Mixed use in interested street/town in Cincinnati**
+**Search for property in Cincinnati**
 
-- **Given**  Type
+- **Given**  Property search button
 
-- **When**  RESIDENTIAL
+- **When**  Click search button
 
-- **Then**  receive list of Residential property details with address
+- **Then**  It will show all the property-projects details in Cincinnati.
 
-**Example 1.2**
+- **Given**  Zipcode search box
 
-- ***Given***  Neighborhood 
+ **When**  key in zipcode
 
-- ***When***  WALNUT HILLS
+- **Then**  It will show all the detials about property-projects in given zipcode (Cincinnati).
 
-- ***Then***  List of properties at given Neighborhood 
 
-**Example 1.3**
+#### Examples 1.2 
 
-- ***Given***  Zipcode 
+**Search for Crime in Cincinnati**
 
-- ***When***  45205
+- **Given**  Crime search button
 
-- ***Then***  List of properties at given zipcode
+- **When**  Click search button
+
+- **Then**  It will show all the crime reported details in Cincinnati.
+
+- **Given**  Zipcode search box
+
+ **When**  key in zipcode
+
+- **Then**  It will show all the detials about crime incidents in given zipcode (Cincinnati).
+
+#### Examples 1.3
+
+**Search for Neighborhood in Cincinnati**
+
+- **Given**  Neighborhood search button
+
+- **When**  Click search button
+
+- **Then**  It will show all the healthcares details in Cincinnati.
+
+- **Given**  Zipcode search box
+
+ **When**  key in zipcode
+
+- **Then**  It will show all the detials about healthcare in given zipcode (Cincinnati).
 
 ### Requirement 2: 
 
@@ -160,7 +201,7 @@ ________________________________________
 
 ## Roles
 
-- Frontend Developer/Integration Developer/ Backend Development: **Shashi Rautela & Ioana Guna**
+- Frontend Developer/Integration Developer/ Backend Development: **Shashi Rautela, Ioana Guna & Damon**
 
 ## Weekly Meeting 
 
