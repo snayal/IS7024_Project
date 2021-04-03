@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/ 2001/xmlSchema">
+   <xs:element name="Plant" >                        
+<!--xsd validation rules go inside this xs: elemnet  tag-->
+
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="genus">
+				<xs:simpleType>
+					<xs:restriction base ="xs:string">
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>/>
+			<xs:element name="species" tye="xs:string" minOccurs="0"/>			
+			
+			<xs:element name="cultivar" tye="xs:string" minOccurs="0"/>
+			<xs:element name="common_name" tye="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	</xs:element>
+</xs:schema>

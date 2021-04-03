@@ -31,12 +31,28 @@ namespace IS7024_Project.Pages
         public void OnGet(string jsonSting)
         {
             using (var webClient = new WebClient())
-            {             
-                string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
-                string propertyResJason = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
-                PropertyQuickType.Property[] propertyZipCodes = PropertyQuickType.Property.FromJson(propertyJson);
+            {
 
+                IDictionary<long, QuickType1.Healthcare> allHealthcares = new Dictionary<long, QuickType1.Healthcare>();
+                string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+                PropertyQuickType.Property[] properties = PropertyQuickType.Property.FromJson(propertyJson);
                
+               
+                
+                
+                
+
+
+                string healthcareJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
+
+                string crimeJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/k59e-2pvf.json");
+                QuickTypeCrimes.Crime[] crimes = QuickTypeCrimes.Crime.FromJson(crimeJSON);
+                
+               
+                string propertyResJason = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+               
+
+              
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("PropertySchema.json"));
                 JArray jsonArray = JArray.Parse(propertyJson);
                 IList<string> validationEvents = new List<string>();
@@ -44,7 +60,7 @@ namespace IS7024_Project.Pages
                 {
                     
                     var property = Property.FromJson(propertyJson);
-                    ViewData["Property"] = property;
+                  
 
                     var propertyResidential = Property.FromJson(propertyResJason);
                     ViewData["PropertyRes"] = propertyResidential;

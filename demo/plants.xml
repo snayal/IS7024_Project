@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<plant xmlns:xsi="http://www.w3.org/ 2001/xmlSchema-instance"
+Xsi:noNamespaceSchemaLocation="plants.xsd">
+        <! All plyload data belongs here-->
+        <genus> Cercis</genus>
+		<species>conadensis</species>
+		<commmon_name>Eastern Redbud</commmon_name>
+		<height>99</height>
+		
+</plant>
