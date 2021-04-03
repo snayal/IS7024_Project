@@ -1,7 +1,7 @@
 @page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 
     var properties = (PropertyQuickType.Property[])ViewData["Property"];
     var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
@@ -65,16 +65,14 @@
     <hr /><br />
     <div class="container boxdefinition">
         <div class="row">
-            <div class="col-md-5 order-md-2">
-                <h2 class="featurette-heading" style="color:crimson"><br />Search Property</h2>
+            <div class="col-md-5 order-md-2" >
+                <h2 class="featurette-heading" style="color:crimson"; text-align: center><br />Search Property</h2>
 
                 <form name="search" method="get" asp-page="/PropertyInvestment">
                     <label for="Property"></label>
                     
-                    <input type="submit" value="Search" class="featurette-heading" style="color:crimson">
+                    <input type="submit" value="Search" class="featurette-heading" style="color:crimson" formtarget="_blank">
                 </form><br />
-                
-
             </div>
             <br />
             <div class="col-md-7 order-md-1">
@@ -88,9 +86,10 @@
                 <form name="search" method="get" asp-page="/Crime">
                     <label for="CrimeReported"></label>
                     
-                    <input type="submit" value="Search" class="featurette-heading" style="color:crimson">
+                    <input type="submit" value="Search" class="featurette-heading" style="color:crimson" formtarget="_blank">
                 </form>
-            </div>
+            </div><br/>
+
 
             <div class="col-md-5">
                 <img class="featurette-image img-fluid mx-auto" src="~/images/safeNeighborhood.jpg" alt="house" width="500" height="250">
@@ -104,7 +103,7 @@
                 <form name="search" method="get" asp-page="/Healthcare">
                     <label for="Healthcare"></label>
                    
-                    <input type="submit" value="Search" class="featurette-heading" style="color:crimson">
+                    <input type="submit" value="Search" class="featurette-heading" formtarget="_blank" style="color:crimson">
                 </form>
             </div>
 
@@ -113,6 +112,7 @@
             </div>
         </div>
     </div>
+    <br/>
     <hr />
 
 
@@ -143,47 +143,8 @@
     </script>
 
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Neighbohood">
-
-    <div class="text-center">
-        <h1 class="featurette-heading" style="color:crimson">Property Information</h1>
-
-        @{
-            {
-                <table id="propertytable" class="table table-warning">
-                    <thead>
-                        <tr>
-                            <th scope="col">Property Type</th>
-                            <th scope="col">Project Categaroy</th>
-                            <th scope="col">Project cost</th>
-                            <th scope="col">Neighborhood</th>
-                            <th scope="col">ZipCode</th>
-
-                            <th></th>
-                        </tr>
-                    </thead>
-                    @foreach (PropertyQuickType.Property property in MyProperty)
-                    {
-                        <tbody>
-                            <tr>
-                                <td>@property.ProjectType</td>
-                                <td>@property.ProjectCategory</td>
-                                <td>$@property.TotalProjectCostEst</td>
-                                <td>@property.Neighborhood</td>
-                                <td>@property.ZipCode</td>
-
-                            </tr>
-                        </tbody>
-
-                    }
-                </table>
-
-            }
-        }
-    </div>
-
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Neighbohood">   
 </main>
-<hr />
-<br />
+
 
 
