@@ -10,11 +10,37 @@
 }
 
 
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("propertytable");
+        tr = table.getElementsByTagName("tr");
 
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+            // [3] is the fourth row of the table -- in this case it is zip code
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                    // display nothing if search doesnt have a return value
+                }
+            }
+        }
+    }
+</script>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
 
 <div class="text-center">
     <h1 class="featurette-heading" style="color:crimson">Property Information</h1>
-    <table class="table table-bordered border-primary">
+    <table id="propertytable" class="table table-bordered border-primary">
         <tr>
             <th>Project Type</th>
             <th>Neighborhood</th>
