@@ -55,7 +55,7 @@ namespace IS7024_Project.Pages
                 QuickTypeCrimes.Crime[] crimes = QuickTypeCrimes.Crime.FromJson(crimeJSON);
                 
                
-                string propertyResJason = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+                string ResidentialPropertyType = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
                
 
               
@@ -68,7 +68,7 @@ namespace IS7024_Project.Pages
                    
                   
 
-                    var propertyResidential = Property.FromJson(propertyResJason);
+                    var propertyResidential = Property.FromJson(ResidentialPropertyType);
                     ViewData["PropertyRes"] = propertyResidential;
                 }
                 else

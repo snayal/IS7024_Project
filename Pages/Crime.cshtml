@@ -53,7 +53,7 @@
 foreach (QuickTypeCrimes.Crime crime in crimes)
             {
         <tr>
-            <td>@crime.DateReported</td>
+            <td>@crime.DateReported.ToString("d")</td>
             <td>@crime.Offense</td>
             <td>@crime.Weapons</td>
             <td>@crime.Location</td>
