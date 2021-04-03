@@ -4,11 +4,13 @@
     ViewData["Title"] = "Home page";
 
     var properties = (PropertyQuickType.Property[])ViewData["Property"];
-    //var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+    var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
+    var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
+    var crimes = (QuickTypeCrimes.Crime[])ViewData["Crime"];
 }
 
 <main role="main">
-    
+
 
     <div class="bd-example">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -65,35 +67,27 @@
         <div class="row">
             <div class="col-md-5 order-md-2">
                 <h2 class="featurette-heading" style="color:crimson"><br />Search Property</h2>
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?zip_code">
+
+                <form name="search" method="get" asp-page="/PropertyInvestment">
                     <label for="Property"></label>
                     <input type="text" value="Zipcode" name="zip_code" style="background-color:aqua">
                     <input type="submit" value="Submit" style="background-color:gold">
                 </form><br />
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type">
-                    <label> </label>
-                    <input type="text" value="Property Type" name="project_type" style="background-color:aqua" >
-                    <input type="submit" value="Submit" style="background-color:gold">
-                </form><br />
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?neighborhood">
-                    <label for="Property"></label>
-                    <input type="text" value="Neighborhood" name="neighborhood"  style="background-color:aqua">
-                    <input type="submit" value="Submit" style="background-color:gold">
-                </form>
                 
+
             </div>
-            <br /> 
+            <br />
             <div class="col-md-7 order-md-1">
                 <img class="featurette-image img-fluid mx-auto" src="~/images/Property-Type-Image.jpg" alt="house" width="500" height="250">
             </div>
         </div>
         <br />
-        <div class="row"  style="text-align:center">
-            <div class="col-md-7"  text-align: center>
+        <div class="row" style="text-align:center">
+            <div class="col-md-7" text-align: center>
                 <h2 class="featurette-heading" style="color:crimson" ; text-align: center><br /><br />Search Crime Reported</h2>
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/k59e-2pvf.json?zip"  text-align: center>
+                <form name="search" method="get" asp-page="/Crime">
                     <label for="CrimeReported"></label>
-                    <input type="text" value="ZipCode" name="zip"  style="background-color:aqua">
+                    <input type="text" value="ZipCode" name="zip" style="background-color:aqua">
                     <input type="submit" value="Submit" style="background-color:gold">
                 </form>
             </div>
@@ -107,7 +101,7 @@
         <div class="row">
             <div class="col-md-5 order-2">
                 <h3 class="featurette-heading" style="color:crimson" text-align: center><br /><br />Search Healthcare </h3>
-                <form name="search" method="get" action="https://data.cincinnati-oh.gov/resource/v8yh-wpss.json?zipcode">
+                <form name="search" method="get" asp-page="/Healthcare">
                     <label for="Healthcare"></label>
                     <input type="text" value="ZipCode" name="zipcode" style="background-color:aqua">
                     <input type="submit" value="Submit" style="background-color:gold">
@@ -119,6 +113,75 @@
             </div>
         </div>
     </div>
+    <hr />
+
+
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("propertytable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[3];
+                // [3] is the fourth row of the table -- in this case it is zip code
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                        // display nothing if search doesnt have a return value
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Neighbohood">
+
+    <div class="text-center">
+        <h1 class="featurette-heading" style="color:crimson">Property Information</h1>
+
+        @{
+            {
+                <table id="propertytable" class="table table-warning">
+                    <thead>
+                        <tr>
+                            <th scope="col">Property Type</th>
+                            <th scope="col">Project Categaroy</th>
+                            <th scope="col">Project cost</th>
+                            <th scope="col">Neighborhood</th>
+                            <th scope="col">ZipCode</th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    @foreach (PropertyQuickType.Property property in MyProperty)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@property.ProjectType</td>
+                                <td>@property.ProjectCategory</td>
+                                <td>$@property.TotalProjectCostEst</td>
+                                <td>@property.Neighborhood</td>
+                                <td>@property.ZipCode</td>
+
+                            </tr>
+                        </tbody>
+
+                    }
+                </table>
+
+            }
+        }
+    </div>
+
 </main>
 <hr />
 <br />

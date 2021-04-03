@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using PropertyQuickType;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using QuickTypeCrimes;
 
 
 namespace IS7024_Project.Pages
@@ -33,16 +34,21 @@ namespace IS7024_Project.Pages
             using (var webClient = new WebClient())
             {
 
+
+                string propertyJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
+
+                string ZipJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+                string NeighJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+                string streetJsonString = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json?project_type=RESIDENTIAL");
+
+                Property[] property = Property.FromJson(propertyJsonString);
+                ViewData["MyProperty"] = property;
+
+
                 IDictionary<long, QuickType1.Healthcare> allHealthcares = new Dictionary<long, QuickType1.Healthcare>();
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
                 PropertyQuickType.Property[] properties = PropertyQuickType.Property.FromJson(propertyJson);
-               
-               
-                
-                
-                
-
-
+                                
                 string healthcareJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/v8yh-wpss.json");
 
                 string crimeJSON = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/k59e-2pvf.json");
@@ -59,7 +65,7 @@ namespace IS7024_Project.Pages
                 if (jsonArray.IsValid(schema, out validationEvents))
                 {
                     
-                    var property = Property.FromJson(propertyJson);
+                   
                   
 
                     var propertyResidential = Property.FromJson(propertyResJason);
@@ -71,13 +77,20 @@ namespace IS7024_Project.Pages
                     {
                         Console.WriteLine(evt);
                     }
-                    ViewData["Property"] = new List<Property>();
+                   
+                    ViewData["MyProperty"] = property;
                 }
             }
 
         }
 
-
+        
     }
 }
+
+
+
+   
+
+
 
