@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-using QuickType1;
+using HealthcareCenter;
 
 namespace IS7024_Project.Pages
 {
@@ -33,7 +33,7 @@ namespace IS7024_Project.Pages
                     {
                         Console.WriteLine(evt);
                     }
-                    ViewData["Healthcare"] = new QuickType1.Healthcare[0];
+                    ViewData["Healthcare"] = new HealthcareCenter.Healthcare[0];
                 }
             }
         }

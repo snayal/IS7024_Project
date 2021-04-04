@@ -6,7 +6,7 @@
 //
 //    var healthcare = Healthcare.FromJson(jsonString);
 
-namespace QuickType1
+namespace HealthcareCenter
 {
     using System;
     using System.Collections.Generic;
@@ -157,12 +157,12 @@ namespace QuickType1
 
     public partial class Healthcare
     {
-        public static Healthcare[] FromJson(string json) => JsonConvert.DeserializeObject<Healthcare[]>(json, QuickType1.Converter.Settings);
+        public static Healthcare[] FromJson(string json) => JsonConvert.DeserializeObject<Healthcare[]>(json, HealthcareCenter.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Healthcare[] self) => JsonConvert.SerializeObject(self, QuickType1.Converter.Settings);
+        public static string ToJson(this Healthcare[] self) => JsonConvert.SerializeObject(self, HealthcareCenter.Converter.Settings);
     }
 
     internal static class Converter

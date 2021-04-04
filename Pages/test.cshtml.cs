@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Logging;
-using QuickType1;
+using HealthcareCenter;
 
 
 namespace IS7024_Project.Pages

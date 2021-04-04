@@ -45,7 +45,7 @@ namespace IS7024_Project.Pages
                 ViewData["MyProperty"] = property;
 
 
-                IDictionary<long, QuickType1.Healthcare> allHealthcares = new Dictionary<long, QuickType1.Healthcare>();
+                IDictionary<long, HealthcareCenter.Healthcare> allHealthcares = new Dictionary<long, HealthcareCenter.Healthcare>();
                 string propertyJson = webClient.DownloadString("https://data.cincinnati-oh.gov/resource/m76i-p5p9.json");
                 PropertyQuickType.Property[] properties = PropertyQuickType.Property.FromJson(propertyJson);
                                 
