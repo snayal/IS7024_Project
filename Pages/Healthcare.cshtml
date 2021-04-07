@@ -1,24 +1,25 @@
 ﻿@page
 @model IS7024_Project.Pages.HealthcareModel
 @{
+    ViewData["title"] = "Healthcare Information";
     var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];
 }
 
 <script>
-    function myFunction() {
+    function filterZipCode() {
         // Declare variables
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
+       filter = input.value.toUpperCase();
         table = document.getElementById("healthcaretable");
         tr = table.getElementsByTagName("tr");
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[5];
+            row_info = tr[i].getElementsByTagName("td")[5];
             // [5] is the 6th row of the table -- in this case it is zip code
-            if (td) {
-                txtValue = td.textContent || td.innerText;
+            if (row_info) {
+                txtValue = row_info.textContent || row_info.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
                 } else {
@@ -30,7 +31,7 @@
     }
 </script>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
+<input type="text" id="myInput" onkeyup="filterZipCode()" placeholder="Input a Zip Code">
 
 
 
@@ -43,23 +44,21 @@
         <tr>
             <th>Healthcare Center<br />
             <th>Neighborhood</th>
-            <th>Services</th>
-            <th>Street Name</th>
+            <th>Services Offered</th>
+            <th>Street</th>
             <th>City</th>
             <th>Zip Code</th>
-
+            
         </tr>
         @{
             foreach (QuickType1.Healthcare healthcare in healthcares)
             {
                 <tr>
 
-                   
-
 
                     <td>@healthcare.HealthCenter</td>
                     <td>@healthcare.Neighborhood</td>
-                    <td>@healthcare.ServicesProvided</td>
+                    <td style="text-align:left">@healthcare.ServicesProvided</td>
                     <td>@healthcare.StreetName</td>
                     <td>@healthcare.City</td>
                     <td>@healthcare.Zipcode</td>
