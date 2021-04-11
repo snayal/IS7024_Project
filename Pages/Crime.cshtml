@@ -13,7 +13,6 @@
         filter = input.value.toUpperCase();
         table = document.getElementById("crimetable");
         tr = table.getElementsByTagName("tr");
-
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
             alltags = tr[i].getElementsByTagName("td");
@@ -33,15 +32,18 @@
                 tr[i].style.display = "none";
             }
         }
+    }
+    
         /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+   
 </script>
-
 
 <div class="text-center">
     <h1 class="featurette-heading" style="color:midnightblue">Crime Information</h1>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Date, Crime Type, Neighborhood, Address, or Zip Code">
-    <table id="crimetable" class="table table-bordered border-primary">
 
+
+    <table id="crimetable" class="table table-bordered border-primary">
         <tr>
             <th>Date of Report</th>
             <th>Type</th>
@@ -67,5 +69,4 @@
         }
     </table>
 </div>
-
 
