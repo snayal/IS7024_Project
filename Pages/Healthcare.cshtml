@@ -16,36 +16,29 @@
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            alltags = tr[i].getElementsByTagName("td");
-            isFound = false;
-            for (j = 0; j < alltags.length; j++) {
-                td = alltags[j];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        j = alltags.length;
-                        isFound = true;
-                    }
+            td = tr[i].getElementsByTagName("td")[5];
+            // [5] is the 6th row of the table -- in this case it is zip code
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                    // display nothing if search doesnt have a return value
                 }
             }
-            if (!isFound && tr[i].className !== "header") {
-                tr[i].style.display = "none";
-            }
         }
-        /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
     }
 </script>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
 
 
 
 
 
 <div class="text-center">
-    <h1 class="featurette-heading" style="color:midnightblue">Healthcare Locations</h1>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Facility by Neighborhood, Street, or Zip Code">
-
-
+    <h1 class="featurette-heading" style="color:crimson">Healthcare Locations</h1>
     <table id="healthcaretable" class="table table-bordered">
 
         <tr>
@@ -62,7 +55,7 @@
             {
                 <tr>
 
-
+                   
 
 
                     <td>@healthcare.HealthCenter</td>

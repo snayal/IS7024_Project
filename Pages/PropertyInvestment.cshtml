@@ -21,53 +21,45 @@
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            alltags = tr[i].getElementsByTagName("td");
-             isFound = false;
-        for(j=0; j< alltags.length; j++) {
-          td = alltags[j];
+            td = tr[i].getElementsByTagName("td")[3];
+            // [3] is the fourth row of the table -- in this case it is zip code
             if (td) {
-              txtValue = td.textContent || td.innerText;
+                txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  tr[i].style.display = "";
-                  j = alltags.length;
-                  isFound = true;
-              }
-            }       
-          }
-          if(!isFound && tr[i].className !== "header") {
-            tr[i].style.display = "none";
-          }
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                    // display nothing if search doesnt have a return value
+                }
+            }
         }
-
-        /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
-}
+    }
 </script>
 
 
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
 
 
 
-
-<div class="text-center">
-    <h1 class="featurette-heading" style="color:midnightblue">Property Information</h1>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Neighborhood, Address, or Zip Code">
-    <table id="propertytable" class="table table-bordered border-primary">
-        <tr>
-            <th>Project Type</th>
-            <th>Neighborhood</th>
-            <th>Street Address</th>
-            <th>Zip Code</th>
-        </tr>
-        @{
-            foreach (PropertyQuickType.Property property in MyProperty)
-            {
-                <tr>
-                    <td>@property.ProjectType</td>
-                    <td>@property.Neighborhood</td>
-                    <td style="text-align:left">@property.SiteStreetAddress</td>
-                    <td>@property.ZipCode</td>
-                </tr>
+    <div class="text-center">
+        <h1 class="featurette-heading" style="color:crimson">Property Information</h1>
+        <table id="propertytable" class="table table-bordered border-primary">
+            <tr>
+                <th>Project Type</th>
+                <th>Neighborhood</th>
+                <th>Street Address</th>
+                <th>Zip Code</th>
+            </tr>
+            @{
+                foreach (PropertyQuickType.Property property in MyProperty)
+                {
+                    <tr>
+                        <td>@property.ProjectType</td>
+                        <td>@property.Neighborhood</td>
+                        <td style="text-align:left">@property.SiteStreetAddress</td>
+                        <td>@property.ZipCode</td>
+                    </tr>
+                }
             }
-        }
-    </table>
-</div>
+        </table>
+    </div>

@@ -16,31 +16,28 @@
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            alltags = tr[i].getElementsByTagName("td");
-            isFound = false;
-            for (j = 0; j < alltags.length; j++) {
-                td = alltags[j];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        j = alltags.length;
-                        isFound = true;
-                    }
+            td = tr[i].getElementsByTagName("td")[6];
+            // [6] is the seventh row of the table -- in this case it is zip code
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                    // display nothing if search doesnt have a return value
                 }
             }
-            if (!isFound && tr[i].className !== "header") {
-                tr[i].style.display = "none";
-            }
         }
-        /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+    }
 </script>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Zip Code">
+
 
 
 <div class="text-center">
-    <h1 class="featurette-heading" style="color:midnightblue">Crime Information</h1>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Date, Crime Type, Neighborhood, Address, or Zip Code">
-    <table id="crimetable" class="table table-bordered border-primary">
+    <h1 class="featurette-heading" style="color:crimson">Crime Information</h1>
+    <table id="crimetable" class="table table-bordered">
 
         <tr>
             <th>Date of Report</th>
@@ -51,18 +48,20 @@
             <th>Address</th>
             <th>Zip Code</th>
         </tr>
-        @{
-            foreach (QuickTypeCrimes.Crime crime in crimes)
+
+
+ @{
+foreach (QuickTypeCrimes.Crime crime in crimes)
             {
-                <tr>
-                    <td>@crime.DateReported</td>
-                    <td>@crime.Offense</td>
-                    <td>@crime.Weapons</td>
-                    <td>@crime.Location</td>
-                    <td>@crime.CpdNeighborhood</td>
-                    <td>@crime.AddressX</td>
-                    <td>@crime.Zip</td>
-                </tr>
+        <tr>
+            <td>@crime.DateReported</td>
+            <td>@crime.Offense</td>
+            <td>@crime.Weapons</td>
+            <td>@crime.Location</td>
+            <td>@crime.CpdNeighborhood</td>
+            <td>@crime.AddressX</td>
+            <td>@crime.Zip</td>
+        </tr>
             }
         }
     </table>
