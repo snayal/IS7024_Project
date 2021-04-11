@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="background-color:aqua">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>@ViewData["Title"] - Property Investment</title>
+      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="~/css/site.css" />
+      <style>
+         #myHeader {
+         background-color: gold;
+         color: slateblue;
+         padding: 0px;
+         text-align: center;
+         }
+         .auto-style1 {
+         width: 100%;
+         }
+         .auto-style2 {
+         width: 339px;
+         }
+         .auto-style3 {
+         width: 494px;
+         height: 140px;
+         }
+         * {
+         margin: 0px;
+         padding: 0px;
+         }
+         .features {
+         color: orangered;
+         padding: 0px 0px;
+         display: flex;
+         flex-direction: row;
+         }
+         .features figure img {
+         width: 0px;
+         text-align: center;
+         text-transform: uppercase;
+         }
+         h1 {
+         color: darkblue;
+         text-align: center;
+         font-size: 56px;
+         font-family: Tahoma;
+         margin: auto;
+         }
+         header {
+         background-color: white;
+         color: gray;
+         margin: 0px;
+         padding: 0px;
+         }
+         footer {
+         background-color: powderblue;
+         color: gray;
+         padding: 1px 2px;
+         text-align: center;
+         }
+         pbar {
+         color: white;
+         margin: auto;
+         }
+      </style>
+   </head>
+   <body>
+      <header style="background-color:azure">
+         <div class="container" >
+            <div class="row" >
+               <div class="col" style="left">
+                  <img src="/images/newlogo.png" alt="logo" width="200" height="100">
+               </div>
+               <div class="col" style="text-align:center">
+                  <img src="/images/logotextmain_lower.png" alt="logotext" width="500" height="100">
+               </div>
+               <div class="col">
+               </div>
+               <div class="col-3">
+               </div>
+            </div>
+         </div>
+         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container" style="background-color:steelblue">
+               <a class="navbar-brand" asp-area="" asp-page="/Index">
+                  <div class="col-sm" style="margin-left:1px 0px;">
+                  </div>
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                  <ul class="navbar-nav flex-grow-1">
+                     <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-page="/Index">
+                           <div class="col-sm" style="margin-left:0px 0px;">
+                              <h3 type="button" class="btn btn-outline-light">
+                                 Home
+                              </h3>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
+                           <div class="col-sm" style="margin-left:50px 2px;">
+                              <h3 type="button" class="btn btn-outline-light">
+                                 Property Search
+                              </h3>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-page="/Crime">
+                           <div class="col-sm" style="margin-left:50px 2px;">
+                              <h3 type="button" class="btn btn-outline-light">
+                                 Crime Details
+                              </h3>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
+                           <div class="col-sm" style="margin-left:50px 2px;">
+                              <h3 type="button" class="btn btn-outline-light">
+                                 Healthcare Facilities
+                              </h3>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-page="/AboutUs">
+                           <div class="col-sm" style="margin-left:50px 2px;">
+                              <h3 type="button" class="btn btn-outline-light">
+                                 About Us
+                              </h3>
+                           </div>
+                        </a>
+                     </li>
+                     <li>
+                        <pbar>
+                           Headquartered at <br />
+                           601 E 6th Ave Cincinnati, OH 45219
+                        </pbar>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <div class="container" >
+         <main role="main" class="pb-3">
+            @RenderBody()
+         </main>
+      </div>
+      <hr />
+      <footer class="border-top footer text-muted">
+         <div class="container">
+            &copy; Copyrights - Property Investment 2021
+         </div>
+      </footer>
+      <script src="~/lib/jquery/dist/jquery.min.js"></script>
+      <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="~/js/site.js" asp-append-version="true"></script>
+      @RenderSection("Scripts", required: false)
+   </body>
+</html>
