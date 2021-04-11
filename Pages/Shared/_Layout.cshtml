@@ -33,9 +33,7 @@
             margin: 0px;
             padding: 0px;
         }
-    </style>
 
-    <style>
         .features {
             color: orangered;
             padding: 0px 0px;
@@ -44,13 +42,17 @@
         }
 
             .features figure img {
-              
                 width: 0px;
                 text-align: center;
                 text-transform: uppercase;
             }
 
         h1 {
+            color: darkblue;
+            text-align: center;
+            font-size: 56px;
+            font-family: Tahoma;
+            margin: auto;
         }
 
         header {
@@ -61,58 +63,51 @@
         }
 
         footer {
-            background-color:powderblue;
+            background-color: powderblue;
             color: gray;
             padding: 1px 2px;
             text-align: center;
         }
 
-        body {
-            background-color:white;
-            margin: 10px;
-            padding: 5px;
+        pbar {
+            color: white;
+            margin: auto;
         }
+
     </style>
 
+
 </head>
-<body style="background-color:azure" >
+<body>
     <header style="background-color:azure">
 
         <div class="container" >
             <div class="row" >
 
                 <div class="col" style="left">
-                    <img src="/images/logo6.jpg" alt="logo" width="200" height="100">
+                    <img src="/images/newlogo.png" alt="logo" width="200" height="100">
                 </div>
 
-                <div class="col order-5" style="text-align">
-                    <h1  class="btn-outline-danger" style="font-family:'Brush Script MT'"> PropertyInvestment</h1>
+                <div class="col" style="text-align:center">
+                    <img src="/images/logotextmain_lower.png" alt="logotext" width="500" height="100">
                 </div>
 
 
-                <div class="col order-5">
+                <div class="col">
                     
                 </div>
 
                
-                <div class="col order-5">
-                    <address>
-                        <strong>Address:</strong>
-                        Property Investment<br />                        
-                        Cincinnati, OH-45236
-                    </address>
+                <div class="col-3">
+
                 </div>
             </div>
         </div>
 
-        <nav  style="background-color:darkgray" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container" style="background-color:gold">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container" style="background-color:steelblue">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
                     <div class="col-sm" style="margin-left:1px 0px;">
-                        <h3 type="button" class="btn-outline-danger">
-                            Property Investment
-
-                        </h3>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -125,17 +120,18 @@
 
                             <a class="navbar-brand" asp-area="" asp-page="/Index">
                                 <div class="col-sm" style="margin-left:0px 0px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                    <h3 type="button" class="btn btn-outline-light">
                                         Home
                                     </h3>
                                 </div>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
                                 <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
-                                        Property
+                                    <h3 type="button" class="btn btn-outline-light">
+                                        Property Search
                                     </h3>
                                 </div>
                             </a>
@@ -145,7 +141,7 @@
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Crime">
                                 <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                    <h3 type="button" class="btn btn-outline-light">
                                         Crime Details
                                     </h3>
                                 </div>
@@ -155,23 +151,30 @@
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
                                 <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
-                                        Healthcare
+                                    <h3 type="button" class="btn btn-outline-light">
+                                        Healthcare Facilities
                                     </h3>
                                 </div>
                             </a>
 
                         </li>
 
+
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/AboutUs">
                                 <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                    <h3 type="button" class="btn btn-outline-light">
                                         About Us
                                     </h3>
                                 </div>
                             </a>
 
+                        </li>
+                        <li>
+                            <pbar>
+                                Headquartered at <br />
+                                601 E 6th Ave Cincinnati, OH 45219
+                            </pbar>
                         </li>
                     </ul>
                 </div>
