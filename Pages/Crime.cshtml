@@ -46,10 +46,11 @@
 
     <table id="crimetable" class="table table-bordered border-primary">
         <tr>
-            <th>Date of Report</th>
+
             <th>Address</th>
             <th>Zip Code</th>
             <th>Neighborhood</th>
+            <th>Report Date & Time(EST)</th>
             <th>Crime Type</th>
             <th>Weapon Involvement</th>
 
@@ -59,10 +60,11 @@
             {
                 <tr>
 
-                    <td>@crime.DateReported</td>
+
                     <td>@crime.AddressX</td>
                     <td>@crime.Zip</td>
                     <td>@crime.CpdNeighborhood</td>
+                    <td>@crime.DateReported</td>
                     <td>@crime.Offense</td>
                     <td>@crime.Weapons</td>
 
