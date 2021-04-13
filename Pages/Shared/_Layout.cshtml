@@ -10,10 +10,10 @@
     <style>
 
         #myHeader {
-            background-color: gold;
-            color: slateblue;
-            padding: 0px;
-            text-align: center;
+            background-color: powderblue;
+            color: red;
+            padding: 1px;
+            text-align: left;
         }
 
         .auto-style1 {
@@ -21,11 +21,11 @@
         }
 
         .auto-style2 {
-            width: 339px;
+            width: 400px;
         }
 
         .auto-style3 {
-            width: 494px;
+            width:500px;
             height: 140px;
         }
 
@@ -33,9 +33,9 @@
             margin: 0px;
             padding: 0px;
         }
-    </style>
+    
 
-    <style>
+    
         .features {
             color: orangered;
             padding: 0px 0px;
@@ -61,7 +61,7 @@
         }
 
         footer {
-            background-color:powderblue;
+            background-color:lightgrey;
             color: gray;
             padding: 1px 2px;
             text-align: center;
@@ -69,23 +69,24 @@
 
         body {
             background-color:white;
-            margin: 10px;
-            padding: 5px;
+            color:blueviolet;
+            margin: 1px;
+            padding: 1px;
         }
     </style>
 
 </head>
-<body style="background-color:azure" >
-    <header style="background-color:azure">
+<body >
+    <header style="background-color:aliceblue">
 
         <div class="container" >
             <div class="row" >
 
-                <div class="col" style="left">
+                <div class="col" style="left:auto">
                     <img src="/images/logo6.jpg" alt="logo" width="200" height="100">
                 </div>
 
-                <div class="col order-5" style="text-align">
+                <div class="col order-5" style="text-align:center">
                     <h1  class="btn-outline-danger" style="font-family:'Brush Script MT'"> PropertyInvestment</h1>
                 </div>
 
@@ -105,14 +106,14 @@
             </div>
         </div>
 
-        <nav  style="background-color:darkgray" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav  style="background-color:aqua" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container" style="background-color:gold">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
-                    <div class="col-sm" style="margin-left:1px 0px;">
-                        <h3 type="button" class="btn-outline-danger">
-                            Property Investment
+                    <div class="col-sm" style="margin-left:1px 1px;">
+                        <h4 type="button" class="btn-outline-danger">
+                           Investment
 
-                        </h3>
+                        </h4>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -125,18 +126,18 @@
 
                             <a class="navbar-brand" asp-area="" asp-page="/Index">
                                 <div class="col-sm" style="margin-left:0px 0px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                    <h4 type="button" class="btn btn-outline-dark">
                                         Home
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
-                                <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                <div class="col-sm" style="margin-left:0px 0px;">
+                                    <h4 type="button" class="btn btn-outline-dark">
                                         Property
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
 
@@ -144,20 +145,20 @@
 
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Crime">
-                                <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                <div class="col-sm" style="margin-left:5px 2px;">
+                                    <h4 type="button" class="btn btn-outline-dark">
                                         Crime Details
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
 
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
-                                <div class="col-sm" style="margin-left:50px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark">
+                                <div class="col-sm" style="margin-left:5px 2px;">
+                                    <h4 type="button" class="btn btn-outline-dark">
                                         Healthcare
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
 
@@ -165,9 +166,19 @@
 
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/AboutUs">
-                                <div class="col-sm" style="margin-left:50px 2px;">
+                                <div class="col-sm" style="margin-left:5px 2px;">
                                     <h3 type="button" class="btn btn-outline-dark">
                                         About Us
+                                    </h3>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-page="/CovidVaccine">
+                                <div class="col-sm" style="margin-left:0px 2px;">
+                                    <h3 type="button" class="btn btn-outline-dark">
+                                        Covid Vaccine
                                     </h3>
                                 </div>
                             </a>

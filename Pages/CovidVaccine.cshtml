@@ -1,0 +1,135 @@
+﻿@page
+@model IS7024_Project.Pages.CovidVaccinesModel
+@{
+    ViewData["Title"] = "CovidVaccines";
+    CovidVaccine.Vaccine[] vaccines = (CovidVaccine.Vaccine[])ViewData["Vaccines"];
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #Vaccine th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+}
+
+
+<h6 class="font-weight-bold" style="color:blue" >
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by State" class="example">
+    Covid Vaccine Availability
+</h6>
+Register yourself for Vaccine
+<button type="button" class="btn btn-primary"> Registeration </button>
+
+    <img src="/images/CovidVaccines.jpg" alt="logo" width="400" height="100">
+
+
+<center><h3 style="align-content:center" class="font-weight-bold"><u>Covid Vaccines</u></h3> </center>
+<h5 style="text-align:center">[Vaccine data from other group]</h5>
+<hr />
+<center>
+    <h5 style="color: blue" class="font-weight-bold"> See how many COVID-19 vaccines your state received!</h5>
+</center>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("Vaccine");
+        tr = table.getElementsByTagName("tr");
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            alltags = tr[i].getElementsByTagName("td");
+            isFound = false;
+            for (j = 0; j < alltags.length; j++) {
+                td = alltags[j];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                        j = alltags.length;
+                        isFound = true;
+                    }
+                }
+            }
+            if (!isFound && tr[i].className !== "header") {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+    /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+
+</script>
+
+
+
+
+<table class="table table-bordered table-striped" id="Vaccine">
+    <thead>
+        <tr>
+            <th class="text-center">State (USA)</th>
+            <th class="text-center">1st Doses Stock</th>
+            <th class="text-center">2nd Dose Stock</th>
+            <th class="text-center">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CovidVaccine.Vaccine vaccine in vaccines)
+        {
+            <tr>
+                <td class="text-center">@vaccine.Jurisdiction</td>
+                <td class="text-center">@vaccine.The1StDoseAllocations</td>
+                <td class="text-center">@vaccine.The2NdDoseAllocations</td>
+                <td class="text-center">@vaccine.WeekOfAllocations.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

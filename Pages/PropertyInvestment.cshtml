@@ -7,16 +7,18 @@
     var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
 
     /* var healthcares = (QuickType1.Healthcare[])ViewData["Healthcare"];*/
+
+
 }
 
-
 <script>
+
     function myFunction() {
         // Declare variables
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
-        table = document.getElementById("propertytable");
+        table = document.getElementById("Property");
         tr = table.getElementsByTagName("tr");
 
         // Loop through all table rows, and hide those who don't match the search query
@@ -39,7 +41,8 @@
             }
         }
     }
-      /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+    /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+
 </script>
 
 
@@ -47,7 +50,9 @@
 <div class="text-center">
     <h1 class="featurette-heading" style="color:midnightblue">Property Information</h1>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Neighborhood, Address, or Zip Code">
-    <table id="propertytable" class="table table-bordered border-primary">
+    
+    
+    <table id="Property" class="table table-bordered border-primary">
         <tr>
             <th>Project Type</th>
             <th>Neighborhood</th>
