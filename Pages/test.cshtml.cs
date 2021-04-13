@@ -31,7 +31,7 @@ namespace IS7024_Project.Pages
         public bool isSearchNeighborhood { get; set; }
         public bool isSearchZipCode { get; set; }
 
-        public string Url { get; set; }
+        public new string Url { get; set; }
  
 
         public void OnGet()

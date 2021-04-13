@@ -10,7 +10,7 @@ namespace QuickTypeCrimes
 {
     using System;
     using System.Collections.Generic;
-
+    using System.ComponentModel.DataAnnotations;
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
@@ -24,9 +24,12 @@ namespace QuickTypeCrimes
         public string IncidentNo { get; set; }
 
         [JsonProperty("date_reported")]
+        [DataType(DataType.Date)]
         public DateTimeOffset DateReported { get; set; }
 
         [JsonProperty("date_from")]
+        [DataType(DataType.Date)]
+        public DateTime CompanyOpenDate { get; set; }
         public DateTimeOffset DateFrom { get; set; }
 
         [JsonProperty("date_to", NullValueHandling = NullValueHandling.Ignore)]
