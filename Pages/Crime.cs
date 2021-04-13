@@ -25,7 +25,7 @@ namespace QuickTypeCrimes
 
         [JsonProperty("date_reported")]
         [DataType(DataType.Date)]
-        public DateTimeOffset DateReported { get; set; }
+        public DateTime DateReported { get; set; }
 
         [JsonProperty("date_from")]
         [DataType(DataType.Date)]

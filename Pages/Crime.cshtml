@@ -34,38 +34,38 @@
             }
         }
     }
-    
-        /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+
    
 </script>
 
 
 <div class="text-center">
+
     <h1 class="featurette-heading" style="color:midnightblue">Crime Information</h1>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Date, Crime Type, Neighborhood, Address, or Zip Code">
-
 
     <table id="crimetable" class="table table-bordered border-primary">
         <tr>
             <th>Date of Report</th>
-            <th>Type</th>
-            <th>Weapon Involvement</th>
-            <th>Location</th>
-            <th>Neighborhood</th>
             <th>Address</th>
             <th>Zip Code</th>
+            <th>Neighborhood</th>
+            <th>Crime Type</th>
+            <th>Weapon Involvement</th>
+
         </tr>
         @{
             foreach (QuickTypeCrimes.Crime crime in crimes)
             {
                 <tr>
+
                     <td>@crime.DateReported</td>
-                    <td>@crime.Offense</td>
-                    <td>@crime.Weapons</td>
-                    <td>@crime.Location</td>
-                    <td>@crime.CpdNeighborhood</td>
                     <td>@crime.AddressX</td>
                     <td>@crime.Zip</td>
+                    <td>@crime.CpdNeighborhood</td>
+                    <td>@crime.Offense</td>
+                    <td>@crime.Weapons</td>
+
                 </tr>
             }
         }
