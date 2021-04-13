@@ -1,0 +1,36 @@
+﻿@page
+@model IS7024_Project.Pages.CovidVaccineUserInputModel
+@{
+    ViewData["Title"] = "User Input";
+    var userInputs = (IList<IS7024_Project.Pages.UserInput>)ViewData["UserInputList"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Covid-19 Vaccination Sign Up</h1>
+    <form method="post">
+        <p>Enter your information!</p>
+        <input type="text" name="FirstName" placeholder="First Name" size="40" />
+        <input type="text" name="LastName" placeholder="Last Name" size="40" /><br />
+        <input type="text" name="Location" placeholder="Location Interested in" size="40" /><br />
+        <input id="Button1" type="submit" value="Submit" />
+    </form>
+</div>
+
+<div>
+    <table border="1" width="90%">
+        <tr><th>First Name</th><th>Last Name</th><th>Location</th></tr>
+        @{
+
+            foreach (IS7024_Project.Pages.UserInput userInput in userInputs)
+            {
+                <tr>
+                    <td>@userInput.FirstName</td>
+                    <td> @userInput.LastName </td>
+                    <td>@userInput.Location</td>
+
+                </tr>
+            }
+
+        }
+    </table>
+</div>
