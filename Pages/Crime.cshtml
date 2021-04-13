@@ -26,10 +26,11 @@
                         j = alltags.length;
                         isFound = true;
                     }
+                    else {
+                        tr[i].style.display = "none";
+                    }
                 }
-            }
-            if (!isFound && tr[i].className !== "header") {
-                tr[i].style.display = "none";
+
             }
         }
     }
