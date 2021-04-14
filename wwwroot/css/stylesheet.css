@@ -1,0 +1,73 @@
+﻿
+header {
+    background-color:thistle;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+h1 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    font-size: 30px;
+    color: mediumpurple;
+}
+h2{
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    font-size: 25px;
+    color:crimson;
+}
+h5 {
+    font-size: 20px;
+    color: mediumpurple;
+    font-weight:bold;
+}
+h3 {
+    font-size: 15px;
+    color: mediumpurple;
+    font-weight: bold;
+}
+h6 {
+    font-size:15px;
+    color:mediumpurple;
+}
+
+#Vaccine th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:thistle;
+    color: white;
+}
+
+
+#Property th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:Highlight;
+    color: white;
+    font-weight: bold;
+
+}
+
+#healthcaretable th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:5px;
+    text-align: center;
+    background-color:darkseagreen;
+    color: white;
+    font-weight: bold;
+}
+.button {
+    background-color:orchid; /* Green */
+    border:groove;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

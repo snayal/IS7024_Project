@@ -4,74 +4,72 @@
 
     ViewData["Title"] = "Property Details";
 
-    var properties = (PropertyQuickType.Property[])ViewData["Property"];
+    //  var properties = (PropertyQuickType.Property[])ViewData["Property"];
     var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
 
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/css/stylepage.css" />
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("Property");
+            tr = table.getElementsByTagName("tr");
 
-<script>
-
-    function myFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("Property");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-            alltags = tr[i].getElementsByTagName("td");
-            isFound = false;
-            for (j = 0; j < alltags.length; j++) {
-                td = alltags[j];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        j = alltags.length;
-                        isFound = true;
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                alltags = tr[i].getElementsByTagName("td");
+                isFound = false;
+                for (j = 0; j < alltags.length; j++) {
+                    td = alltags[j];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            j = alltags.length;
+                            isFound = true;
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
                     }
-                    else {
-                        tr[i].style.display = "none";
+
                 }
             }
-
-            }
         }
-    }
-
-</script>
-
-
-
-<div class="text-center">
-    <h1 class="featurette-heading" style="color:midnightblue">Property Information</h1>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Neighborhood, Address, or Zip Code">
-    
-    
-    <table id="Property" class="table table-bordered border-primary">
-        <tr>
-
-            <th>Project Type</th>
-            <th>Street Address</th>
-            <th>Neighborhood</th>
-            <th>Zip Code</th>
-
-        </tr>
-        @{
-            foreach (PropertyQuickType.Property property in MyProperty)
-            {
-                <tr>
-
-                    <td>@property.ProjectType</td>
-                    <td style="text-align:left">@property.SiteStreetAddress</td>
-                    <td>@property.Neighborhood</td>
-                    <td>@property.ZipCode</td>
-
-                </tr>
+    </script>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="featurette-heading" >Property Information</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Input a Neighborhood, Address, or Zip Code">
+        <link rel="stylesheet" href="main.css" />
+        <hr />
+        <table id="Property" class="table table-bordered border-primary">
+            <tr>
+                <th>Project Type</th>
+                <th>Street Address</th>
+                <th>Neighborhood</th>
+                <th>Zip Code</th>
+            </tr>
+            @{
+                foreach (PropertyQuickType.Property property in MyProperty)
+                {
+                    <tr>
+                        <td>@property.ProjectType</td>
+                        <td style="text-align:left">@property.SiteStreetAddress</td>
+                        <td>@property.Neighborhood</td>
+                        <td>@property.ZipCode</td>
+                    </tr>
+                }
             }
-        }
-
-    </table>
-</div>
+        </table>
+    </div>
+</body>
+</html>

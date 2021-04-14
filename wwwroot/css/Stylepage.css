@@ -1,0 +1,84 @@
+﻿
+
+    body {
+}
+
+header {
+    background-color: thistle;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+h1 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    font-size: 30px;
+    color: mediumpurple;
+}
+
+h2 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    font-size: 25px;
+    color: crimson;
+}
+
+h5 {
+    font-size: 20px;
+    color: mediumpurple;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 15px;
+    color: mediumpurple;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 15px;
+    color: mediumpurple;
+}
+
+
+
+#Property th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: palevioletred;
+    color: white;
+    font-weight: bold;
+}
+
+
+#crimetable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+}
+
+#healccretable  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:crimson;
+    color: white;
+    font-weight: bold;
+}
+
+
+.button {
+    background-color: orchid; /* Green */
+    border: groove;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+        

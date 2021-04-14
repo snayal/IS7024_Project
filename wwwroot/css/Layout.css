@@ -1,0 +1,68 @@
+﻿body {
+}
+#myHeader {
+    background-color: powderblue;
+    color: red;
+    padding: 1px;
+    text-align: left;
+}
+
+.auto-style1 {
+    width: 100%;
+}
+
+.auto-style2 {
+    width: 400px;
+}
+
+.auto-style3 {
+    width: 500px;
+    height: 140px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.features {
+    color: orangered;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+    .features figure img {
+        width: 0px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+h1 {
+    font-weight:bold;
+}
+
+header {
+    background-color: white;
+    color: gray;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    background-color: lightgrey;
+    color: gray;
+    padding: 1px 2px;
+    text-align: center;
+}
+
+
+
+body {
+    background-color: white;
+    color: blueviolet;
+    margin: 1px;
+    padding: 1px;
+}
