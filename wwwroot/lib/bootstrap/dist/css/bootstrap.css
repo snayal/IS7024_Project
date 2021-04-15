@@ -1522,6 +1522,7 @@ pre code {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
+
 }
 
 .table thead th {
@@ -1539,13 +1540,17 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    table-layout: fixed;
 }
 
-.table-bordered th,
-.table-bordered td {
-  border: 1px solid #dee2e6;
-}
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #dee2e6;
+        max-width: 100%;
+        white-space: nowrap;
+    }
 
 .table-bordered thead th,
 .table-bordered thead td {
