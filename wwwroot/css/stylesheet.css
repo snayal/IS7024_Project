@@ -24,7 +24,7 @@ h5 {
     font-weight:bold;
 }
 h3 {
-    font-size: 15px;
+    font-size: 20px;
     color: mediumpurple;
     font-weight: bold;
 }
@@ -60,7 +60,7 @@ h6 {
     padding-bottom: 5px;
     padding-left:5px;
     text-align: center;
-    background-color:darkseagreen;
+
     color: white;
     font-weight: bold;
 }
