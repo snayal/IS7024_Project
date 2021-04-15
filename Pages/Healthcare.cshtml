@@ -9,42 +9,12 @@
 <head style="background-color:aqua">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/Stylepage.css" />
-    <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("healthcaretable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                alltags = tr[i].getElementsByTagName("td");
-                isFound = false;
-                for (j = 0; j < alltags.length; j++) {
-                    td = alltags[j];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                            j = alltags.length;
-                            isFound = true;
-                        }
-                        else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-
-                }
-            }
-        }
-    </script>
 </head>
+
 <body>
     <div class="text-center">
         <h1 id="healthcaretitle" class="featurette-heading">Healthcare Locations</h1>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Facility by Neighborhood, Street, or Zip Code"><hr />
+        <input type="text" id="HealthcareInput" onkeyup="myFunctionHealthcare()" placeholder="Search for a Facility by Neighborhood, Street, or Zip Code"><hr />
         <table id="healthcaretable" class="table table-bordered" border="1">
             <tr>
                 <th>Street Name</th>
