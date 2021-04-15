@@ -8,105 +8,106 @@
 
 
 }
-<!DOCTYPE html>
-<html lang="en">
-<head style="background-color:aqua">
-    <meta charset="utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head style="background-color:aqua">
+        <meta charset="utf-8" />
 
 
-
-    <link rel="stylesheet" href="/css/stylesheet.css" />
-    <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("Vaccine");
-            tr = table.getElementsByTagName("tr");
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                alltags = tr[i].getElementsByTagName("td");
-                isFound = false;
-                for (j = 0; j < alltags.length; j++) {
-                    td = alltags[j];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                            j = alltags.length;
-                            isFound = true;
+        <link rel="stylesheet" href="/css/stylesheet.css" />
+        <script>
+            function myFunction() {
+                // Declare variables
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("Vaccine");
+                tr = table.getElementsByTagName("tr");
+                // Loop through all table rows, and hide those who don't match the search query
+                for (i = 0; i < tr.length; i++) {
+                    alltags = tr[i].getElementsByTagName("td");
+                    isFound = false;
+                    for (j = 0; j < alltags.length; j++) {
+                        td = alltags[j];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                                j = alltags.length;
+                                isFound = true;
+                            }
                         }
                     }
-                }
-                if (!isFound && tr[i].className !== "header") {
-                    tr[i].style.display = "none";
+                    if (!isFound && tr[i].className !== "header") {
+                        tr[i].style.display = "none";
+                    }
                 }
             }
-        }
 
-        /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
+            /// the above filter function removes the column tags upon search. not sure how to fix this just yet. ^^^^^^^^^^^^^^^^^^
 
-    </script>
+        </script>
 
-</head>
-<body>
-    
-    <div class="container">
-        <div>
-            <h6>
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="--Search by State--"  style="background-color:white" >
-                Covid Vaccine Availability
-            </h6>
+    </head>
+    <body>
+
+        <div class="container">
+            <div>
+                <h6>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="--Search by State--" style="background-color:white" />
+                    Covid Vaccine Availability
+                </h6>
+
+            </div>
+            <div class="text-center">
+                <img src="/images/CovidVaccines.jpg" alt="logo" width="400" height="100" />
+            </div>
+            <div class="text-md-right">
+                <h6>
+                    Register for Covid19 Vaccination
+
+                    <a href="/CovidVaccineUserInput" class="button" role="button">Registration</a>
+                </h6>
+            </div>
 
         </div>
-        <div class="text-center">
-            <img src="/images/CovidVaccines.jpg" alt="logo" width="400" height="100">
-        </div>
-        <div class="text-md-right">
-            <h6>
-                Register for Covid19 Vaccination
 
-                <a href="/CovidVaccineUserInput" class="button" role="button">Registration</a>
-            </h6>
-        </div>
-
-    </div>
-
-    <center><h1 style="align-content:center" class="font-weight-bold"><u>Covid Vaccines</u></h1> </center>
-    <h5 style="text-align:center">[Vaccine data from other group]</h5>
-    <hr />
-    <center>
-        <h2 > See how many COVID-19 vaccines your state received!</h2>
-    </center>
-
-    
+        <center><h1 style="align-content:center" class="font-weight-bold"><u>Covid Vaccines</u></h1> </center>
+        <h5 style="text-align:center">[Vaccine data from other group]</h5>
+        <hr />
+        <center>
+            <h2> See how many COVID-19 vaccines your state received!</h2>
+        </center>
 
 
 
 
-    <table class="table table-bordered table-striped" id="Vaccine">
-        <thead>
-            <tr>
-                <th class="text-center">State (USA)</th>
-                <th class="text-center">1st Doses Stock</th>
-                <th class="text-center">2nd Dose Stock</th>
-                <th class="text-center">Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (CovidVaccine.Vaccine vaccine in vaccines)
-            {
+
+
+        <table class="table table-bordered table-striped" id="Vaccine">
+            <thead>
                 <tr>
-                    <td class="text-center">@vaccine.Jurisdiction</td>
-                    <td class="text-center">@vaccine.The1StDoseAllocations</td>
-                    <td class="text-center">@vaccine.The2NdDoseAllocations</td>
-                    <td class="text-center">@vaccine.WeekOfAllocations.Date</td>
+                    <th class="text-center">State (USA)</th>
+                    <th class="text-center">1st Doses Stock</th>
+                    <th class="text-center">2nd Dose Stock</th>
+                    <th class="text-center">Date</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (CovidVaccine.Vaccine vaccine in vaccines)
+                {
+                    <tr>
+                        <td class="text-center">@vaccine.Jurisdiction</td>
+                        <td class="text-center">@vaccine.The1StDoseAllocations</td>
+                        <td class="text-center">@vaccine.The2NdDoseAllocations</td>
+                        <td class="text-center">@vaccine.WeekOfAllocations.Date</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
     </body>
+
 </html>
 

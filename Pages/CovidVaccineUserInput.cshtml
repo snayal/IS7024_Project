@@ -5,32 +5,42 @@
     var userInputs = (IList<IS7024_Project.Pages.UserInput>)ViewData["UserInputList"];
 }
 
-<div class="text-center">
-    <h1 class="display-4">Covid-19 Vaccination Sign Up</h1>
-    <form method="post">
-        <p>Enter your information!</p>
-        <input type="text" name="FirstName" placeholder="First Name" size="40" />
-        <input type="text" name="LastName" placeholder="Last Name" size="40" /><br />
-        <input type="text" name="Location" placeholder="Location Interested in" size="40" /><br />
-        <input id="Button1" type="submit" value="Submit" />
-    </form>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-<div>
-    <table border="1" width="90%">
-        <tr><th>First Name</th><th>Last Name</th><th>Location</th></tr>
-        @{
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="text-center">
+            <h1 class="display-4">Covid-19 Vaccination Sign Up</h1>
+            <form method="post">
+                <p>Enter your information!</p>
+                <input type="text" name="FirstName" placeholder="First Name" size="40" />
+                <input type="text" name="LastName" placeholder="Last Name" size="40" /><br />
+                <input type="text" name="Location" placeholder="Location Interested in" size="40" /><br />
+                <input id="Button1" type="submit" value="Submit" />
+            </form>
+        </div>
 
-            foreach (IS7024_Project.Pages.UserInput userInput in userInputs)
-            {
-                <tr>
-                    <td>@userInput.FirstName</td>
-                    <td> @userInput.LastName </td>
-                    <td>@userInput.Location</td>
+        <div>
+            <table border="1" width="90%">
+                <tr><th>First Name</th><th>Last Name</th><th>Location</th></tr>
+                @{
 
-                </tr>
-            }
+                    foreach (IS7024_Project.Pages.UserInput userInput in userInputs)
+                    {
+                        <tr>
+                            <td>@userInput.FirstName</td>
+                            <td> @userInput.LastName </td>
+                            <td>@userInput.Location</td>
 
-        }
-    </table>
-</div>
+                        </tr>
+                    }
+
+                }
+            </table>
+        </div>
+    </body>
+</html>
