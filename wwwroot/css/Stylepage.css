@@ -9,12 +9,15 @@ header {
     margin: 0px;
     padding: 0px;
 }
+h11 {
+    color:red;
+}
 
 
 h1 {
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
     font-size: 30px;
-    color: mediumpurple;
+    color:blue;
 }
 
 h2 {
@@ -56,16 +59,16 @@ h6 {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: cadetblue;
+    background-color: blueviolet;
     color: white;
     font-weight: bold;
 }
 
-#healccretable  th {
+#healthcaretable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color:crimson;
+    background-color: crimson;
     color: white;
     font-weight: bold;
 }
