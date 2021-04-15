@@ -1,26 +1,42 @@
 ﻿
 
-    body {
-}
-
 header {
-    background-color: thistle;
+    background-color: white;
     color: black;
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 10px;
 }
 
 
-h1 {
+#vaccineheader h1 {
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
     font-size: 30px;
     color: mediumpurple;
+}
+
+#maintitle h1 {
+    font-size: 36pt;
+    font-family:  Verdana;
+
+}
+
+h1 {
+    font-size: large;
+    font-size: 30px;
+    color: black;
 }
 
 h2 {
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
     font-size: 25px;
     color: crimson;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 25px;
+    color: mediumpurple;
+    font-weight: bold;
 }
 
 h5 {
@@ -29,11 +45,7 @@ h5 {
     font-weight: bold;
 }
 
-h3 {
-    font-size: 15px;
-    color: mediumpurple;
-    font-weight: bold;
-}
+
 
 h6 {
     font-size: 15px;
@@ -56,17 +68,18 @@ h6 {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: cadetblue;
-    color: white;
+    background-color: #D84727;
+    color: black;
     font-weight: bold;
+
 }
 
-#healccretable  th {
+#healthcaretable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color:crimson;
-    color: white;
+    background-color: #CDEDF6;
+    color: black;
     font-weight: bold;
 }
 
@@ -80,5 +93,21 @@ h6 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+
+
+
+body {
+    background-color: antiquewhite;
+    color: black;
+    margin: 1px;
+    padding: 1px;
+}
+
+.myDiv {
+    border: 5px outset red;
+    background-color: orangered;
+    text-align: center;
 }
         
