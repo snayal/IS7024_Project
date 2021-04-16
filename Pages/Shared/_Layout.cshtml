@@ -32,7 +32,6 @@
                         Property Investment
                         <br />
                         Cincinnati, OH-45236
-
                     </address>
                 </div>
             </div>
@@ -111,14 +110,39 @@
     </div>
     <hr />
     <footer>
+        <a class="navbar-brand" asp-page="/PropertyInvestment">
+            <h4 type="button" class="button">
+                Property
+            </h4>
+        </a>
+        <a class="navbar-brand" asp-page="/Healthcare">
+            <h4 type="button" class="button">
+                Healthcare
+            </h4>
+        </a>
+        <a class="navbar-brand" asp-page="/Crime">
+            <h4 type="button" class="button">
+                Crime
+            </h4>
+        </a>
+        <a class="navbar-brand" asp-page="/CovidVaccine">
+            <h4 type="button" class="button">
+                Covid Vaccine
+            </h4>
+        </a>
+        <a class="navbar-brand" asp-page="/CovidVaccineUserInput">
+            <h4 type="button" class="button">
+                Vaccine Registration
+            </h4>
+        </a>
         &copy; Copyrights - Property Investment 2021
-
+        </a>
+        </a>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
-
 </body>
 </html>

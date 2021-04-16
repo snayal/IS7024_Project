@@ -8,8 +8,6 @@
     var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
     var crimes = (QuickTypeCrimes.Crime[])ViewData["Crime"];
 }
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -80,7 +78,6 @@
             <div class="col-md-5 order-md-2">
                 <h2 class="featurette-heading">
                     <br /> Search Property
-
                 </h2>
                 <form name="search" method="get" asp-page="/PropertyInvestment">
                     <label for="Property"></label>
@@ -100,6 +97,7 @@
                     <br />
                     <br /> Search Crime Reported
 
+
                 </h2>
                 <form name="search" method="get" asp-page="/Crime">
                     <label for="CrimeReported"></label>
@@ -117,7 +115,6 @@
                 <h2 class="featurette-heading">
                     <br />
                     <br /> Search Healthcare
-
                 </h2>
                 <form name="search" method="get" asp-page="/Healthcare">
                     <label for="Healthcare"></label>
