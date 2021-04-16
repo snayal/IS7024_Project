@@ -12,6 +12,8 @@
 
 - Ioana Guna
 
+- Damon Nicholas
+
 ## Introduction
 
 Do you want to find the best location for your future investment? Do you know how to search properties that are located in a safe location with healthcare facilities? MyFutureInvestment can help you:
@@ -201,7 +203,7 @@ ________________________________________
 
 ## Roles
 
-- Frontend Developer/Integration Developer/ Backend Development: **Shashi Rautela, Ioana Guna & Damon**
+- Frontend Developer/Integration Developer/ Backend Development: **Shashi Rautela, Ioana Guna & Damon Nicholas**
 
 ## Weekly Meeting 
 
