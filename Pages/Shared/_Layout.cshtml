@@ -2,14 +2,21 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset = utf-8" />
+
+    <meta name="author" content="Shashi Rautela" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Property Investment</title>
+
+    <meta name="description" content="brief page description" />
+    <meta name="keywords" content="keywords  for, our, property investment" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/test1.css" />
+
 
 </head>
+
+
 <body>
 
     <header class="align-content-sm-center">
@@ -18,22 +25,19 @@
             <div class="row">
 
                 <div class="col" style="left:auto">
-                    <img src="/images/logo6.jpg" alt="logo" width="200" height="100" />
+                    <img src="/images/logo5.jpeg" alt="logo" width="300" height="100" />
                 </div>
 
-                <div class="col order-5" style="text-align:center">
-                    <h1 class="btn-outline-danger" style="font-family:'Brush Script MT'"> PropertyInvestment</h1>
+                <div>
+                    <br /><br />
+                    <h1> Property Investment</h1>
                 </div>
-
-
                 <div class="col order-5">
-
                 </div>
-
-
                 <div class="col order-5">
-                    <address>
-                        <strong>Address:</strong><br />
+                    <br />
+                    <address class="address">
+                        Address<br />
                         Property Investment<br />
                         Cincinnati, OH-45236
                     </address>
@@ -41,16 +45,9 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-#3a4953 border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">
-                    <div class="col-sm" style="margin-left:1px 1px;">
-                        <h4 type="button" class="btn-outline-danger">
-                            Investment
 
-                        </h4>
-                    </div>
-                </a>
                 <button style="color:mediumpurple" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -61,7 +58,7 @@
 
                             <a class="navbar-brand" asp-area="" asp-page="/Index">
                                 <div class="col-sm" style="margin-left:0px 0px;">
-                                    <h4 type="button" style="background-color:orchid" class="btn btn-outline-dark">
+                                    <h4 type="button" class="button">
                                         Home
                                     </h4>
                                 </div>
@@ -70,7 +67,7 @@
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
                                 <div class="col-sm" style="margin-left:0px 0px;">
-                                    <h4 type="button" class="btn btn-outline-dark" style="background-color:orchid">
+                                    <h4 type="button" class="button">
                                         Property
                                     </h4>
                                 </div>
@@ -78,33 +75,32 @@
 
                         </li>
 
-                        <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/Crime">
-                                <div class="col-sm" style="margin-left:5px 2px;">
-                                    <h4 type="button" class="btn btn-outline-dark" style="background-color:orchid">
-                                        Crime Details
-                                    </h4>
-                                </div>
-                            </a>
 
-                        </li>
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
                                 <div class="col-sm" style="margin-left:5px 2px;">
-                                    <h4 type="button" class="btn btn-outline-dark" style="background-color:orchid">
+                                    <h4 type="button" class="button">
                                         Healthcare
                                     </h4>
                                 </div>
                             </a>
 
                         </li>
-
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-page="/Crime">
+                                <div class="col-sm" style="margin-left:5px 2px;">
+                                    <h4 type="button" class="button">
+                                        Crime Details
+                                    </h4>
+                                </div>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/CovidVaccine">
                                 <div class="col-sm" style="margin-left:0px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark" style="background-color:orchid">
+                                    <h4 type="button" class="button">
                                         Covid Vaccinations
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
 
@@ -113,9 +109,9 @@
                         <li class="nav-item">
                             <a class="navbar-brand" asp-area="" asp-page="/AboutUs">
                                 <div class="col-sm" style="margin-left:5px 2px;">
-                                    <h3 type="button" class="btn btn-outline-dark" style="background-color:orchid">
+                                    <h4 type="button" class="button">
                                         About Us
-                                    </h3>
+                                    </h4>
                                 </div>
                             </a>
 
@@ -126,11 +122,7 @@
             </div>
         </nav>
 
-
-
     </header>
-
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -139,10 +131,9 @@
 
     <hr />
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; Copyrights - Property Investment 2021
-        </div>
+    <footer>
+        &copy; Copyrights - Property Investment 2021
+
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -151,4 +142,5 @@
 
     @RenderSection("Scripts", required: false)
 </body>
+</html>
 </html>

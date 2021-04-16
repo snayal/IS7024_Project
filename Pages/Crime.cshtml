@@ -6,42 +6,53 @@
 }
 
 
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <link rel="stylesheet" href="~/css/Stylepage.css" />
+
+    <title>Crime Details</title>
+    <meta http-equiv="content-type" content="text/html; charset = utf-8" />
+    <meta name="author" content="Shashi Rautela" />
+    <meta name="description" content="brief page description" />
+    <meta name="keywords" content="keywords  for, our, property investment" />
+    <link rel="stylesheet" type="text/css" href="/css/Stylepage.css" />
 
 </head>
 <body>
-    <div class="text-center">
+    <div >
 
-        <h1 class="featurette-heading">Crime Information</h1>
-        <input type="text" id="CrimeInput" onkeyup="myFunctionCrime()" placeholder="Search by Date, Crime Type, Neighborhood, Address, or Zip Code"><hr />
-        <table id="crimetable" class="table table-bordered border-primary">
-            <tr>
-                <th>Address</th>
-                <th>Zip Code</th>
-                <th>Neighborhood</th>
-                <th>Report Date & Time(EST)</th>
-                <th>Crime Type</th>
-                <th>Weapon Involvement</th>
-            </tr>
-            @{
-                foreach (QuickTypeCrimes.Crime crime in crimes)
-                {
-                    <tr>
-                        <td>@crime.AddressX</td>
-                        <td>@crime.Zip</td>
-                        <td>@crime.CpdNeighborhood</td>
-                        <td>@crime.DateReported</td>
-                        <td>@crime.Offense</td>
-                        <td>@crime.Weapons</td>
-                    </tr>
-                }
-            }
-
-        </table>
+        <h2 class="featurette-heading">Crime Information</h2>
+        <div>
+            <center> <input type="text" id="CrimeInput" onkeyup="myFunctionCrime()" placeholder="Search by Date, Crime Type, Neighborhood, Address, or Zip Code" /></center><hr />
         </div>
+        <div class="myDiv">
+            <table id="crimetable" class="table">
+                <tr>
+                    <th>Address</th>
+                    <th>Zip Code</th>
+                    <th>Neighborhood</th>
+                    <th>Date</th>
+                    <th>Crime Type</th>
+                    <th>Weapon Involvement</th>
+                </tr>
+                @{
+                    foreach (QuickTypeCrimes.Crime crime in crimes)
+                    {
+                        <tr>
+                            <td>@crime.AddressX</td>
+                            <td>@crime.Zip</td>
+                            <td>@crime.CpdNeighborhood</td>
+                            <td>@crime.DateReported</td>
+                            <td>@crime.Offense</td>
+                            <td>@crime.Weapons</td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
 </body>
 </html>

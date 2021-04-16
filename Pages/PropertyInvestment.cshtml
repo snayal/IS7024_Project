@@ -8,38 +8,48 @@
     var MyProperty = (PropertyQuickType.Property[])ViewData["MyProperty"];
 
 }
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <link rel="stylesheet" href="/css/stylepage.css" />
-    <link rel="stylesheet" href="main.css" />
+
+
+    <title> Property details</title>
+    <meta http-equiv="content-type" content="text/html; charset = utf-8" />
+    <meta name="author" content="Shashi Rautela" />
+    <meta name="description" content="brief page description" />
+    <meta name="keywords" content="keywords  for, our, property investment" />
+    <link rel="stylesheet" type="text/css" href="/css/Stylepage.css" />
+
 </head>
 
+
 <body>
-    <div class="text-center">
-        <h1 class="featurette-heading">Property Information</h1>
-        <input type="text" id="PropertyInput" onkeyup="myFunctionProperty()" placeholder="Input a Neighborhood, Address, or Zip Code" />
-        <table id="Property" class="table table-bordered border-primary">
-            <tr>
-                <th>Project Type</th>
-                <th>Street Address</th>
-                <th>Neighborhood</th>
-                <th>Zip Code</th>
-            </tr>
-            @{
-                foreach (PropertyQuickType.Property property in MyProperty)
-                {
-                    <tr>
-                        <td>@property.ProjectType</td>
-                        <td style="text-align:left">@property.SiteStreetAddress</td>
-                        <td>@property.Neighborhood</td>
-                        <td>@property.ZipCode</td>
-                    </tr>
+    <div>
+        <h2 class="featurette-heading">Property Information</h2>
+        <center><input type="text" id="PropertyInput" onkeyup="myFunctionProperty()" placeholder="Input a Neighborhood, Address, or Zip Code" /></center><hr />
+    </div>
+    <div>
+        <div class="myDiv">
+            <table id="Property" class="table">
+                <tr>
+                    <th>Project Type</th>
+                    <th>Street Address</th>
+                    <th>Neighborhood</th>
+                    <th>Zip Code</th>
+                </tr>
+                @{
+                    foreach (PropertyQuickType.Property property in MyProperty)
+                    {
+                        <tr>
+                            <td>@property.ProjectType</td>
+                            <td>@property.SiteStreetAddress</td>
+                            <td>@property.Neighborhood</td>
+                            <td>@property.ZipCode</td>
+                        </tr>
+                    }
                 }
-            }
-        </table>
+            </table>
+        </div>
     </div>
 </body>
 </html>

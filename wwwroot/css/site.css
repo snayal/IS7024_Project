@@ -1,82 +1,64 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color:burlywood;
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
 }
 
 .btn-primary {
-  color:#1861ac;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #1861ac;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color:blue;
-  background-color:mediumvioletred;
-  border-color: #1861ac;
+.btn-primary {
+    color: #1861ac;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-
-@media (min-width: 768px) {
-  html {
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
-  }
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.nav-pills .nav-link.active {
+    color: blue;
+    border-color: #1861ac;
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-body {
-  /* Margin bottom by footer height */
-   background-image:url("../images/dream_home_6.jpg";
-}
 header {
-    background-color:plum;
-    color: gray;
+    color: white;
     margin: 10px;
     padding: 10px;
 }
 
-h1{
-    font-size:large;
-    font-weight:500;
-    color:deeppink;
+h1 {
+    font-size: 20px;
+    font-weight: 500;
 }
+
 footer {
-    background-color: lightgrey;
-    color: gray;
-    padding: 1px 2px;
+    color: white;
+    padding: 1px 5px;
     text-align: center;
+    background-color: black;
 }
-
-
-
 
 .auto-style1 {
     width: 100%;
@@ -93,43 +75,17 @@ footer {
 
 
 
-
-
-.features {
-    color: orangered;
-    padding: 0px 0px;
-    display: flex;
-    flex-direction: row;
-}
-
     .features figure img {
-        width: 0px;
+        width: 0;
         text-align: center;
         text-transform: uppercase;
     }
 
 
 
-header {
-    background-color:mediumpurple;
-    color: gray;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-
-
-
 body {
-    background-color:lavender;
-    color: blueviolet;
+    background-color: #94badf;
+    color: black;
     margin: 1px;
     padding: 1px;
-}
-
-.myDiv {
-    border: 5px outset red;
-    background-color:orangered;
-    text-align: center;
 }

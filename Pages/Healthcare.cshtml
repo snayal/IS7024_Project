@@ -4,44 +4,57 @@
     ViewData["Title"] = "Healthcare Details";
     var healthcares = (HealthcareCenter.Healthcare[])ViewData["Healthcare"];
 }
-<!DOCTYPE html>
-<html lang="en">
-<head style="background-color:aqua">
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/Stylepage.css" />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <title> Healthcare Information</title>
+    <meta http-equiv="content-type" content="text/html; charset = utf-8" />
+    <meta name="author" content="Shashi Rautela" />
+    <meta name="description" content="brief page description" />
+    <meta name="keywords" content="keywords  for, our, property investment" />
+    <link rel="stylesheet" type="text/css" href="/css/Stylepage.css" />
+
 </head>
 
 <body>
-    <div class="text-center">
-        <h1 id="healthcaretitle" class="featurette-heading">Healthcare Locations</h1>
-        <input type="text" id="HealthcareInput" onkeyup="myFunctionHealthcare()" placeholder="Search for a Facility by Neighborhood, Street, or Zip Code"><hr />
-        <table id="healthcaretable" class="table table-bordered" border="1">
-            <tr>
-                <th>Street Name</th>
-                <th>City</th>
-                <th>Zip Code</th>
-                <th>Neighborhood</th>
-                <th>
-                    Healthcare Center
-                    <br />
-                <th>Services</th>
-            </tr>
-            @{
-                foreach (HealthcareCenter.Healthcare healthcare in healthcares)
-                {
 
-                    <tr>
-                        <td>@healthcare.StreetName</td>
-                        <td>@healthcare.City</td>
-                        <td>@healthcare.Zipcode</td>
-                        <td>@healthcare.Neighborhood</td>
-                        <td>@healthcare.HealthCenter</td>
-                        <td class="text-md-center">@healthcare.ServicesProvided</td>
-                    </tr>
+    <h2 id="healthcaretitle" class="featurette-heading">Healthcare Locations</h2> 
+    <center> <input type="text" id="HealthcareInput" onkeyup="myFunctionHealthcare()" placeholder="Search for a Facility by Neighborhood, Street, or Zip Code" /> <center>
+        <hr />
+        <div class="myDiv">
+            <table id="healthcaretable">
+                <tr>
+                    <th>Street Name</th>
+                    <th>City</th>
+                    <th>Zip Code</th>
+                    <th>Neighborhood</th>
+                    <th>
+                        Healthcare Center
+                        <br />
+                    </th>
+                    <th>Services</th>
+                </tr>
+                @{
+                    foreach (HealthcareCenter.Healthcare healthcare in healthcares)
+                    {
+
+                        <tr>
+                            <td>@healthcare.StreetName</td>
+                            <td>@healthcare.City</td>
+                            <td>@healthcare.Zipcode</td>
+                            <td>@healthcare.Neighborhood</td>
+                            <td>@healthcare.HealthCenter</td>
+                            <td class="text-md-center">@healthcare.ServicesProvided</td>
+                        </tr>
+                    }
                 }
-            }
 
-        </table>
-    </div>
-</body>
+            </table>
+        </div>
+    </center>
+</center></body>
 </html>

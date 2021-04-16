@@ -1,44 +1,54 @@
-﻿
-
-header {
-    background-color: white;
-    color: black;
-    margin: 10px;
-    padding: 10px;
+﻿header {
+    background-color: whitesmoke;
+    margin: 1px;
+    padding: 2px;
 }
-h11 {
-    color:red;
-}
-
 
 #vaccineheader h1 {
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
     font-size: 30px;
-    color:blue;
+    color: blue;
 }
+
 
 #maintitle h1 {
     font-size: 36pt;
-    font-family:  Verdana;
+    font-family: Verdana;
+}
 
+.address {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    font-size: 12px;
+    color: #3a4953;
+    text-align: center;
+    font-weight: bold;
 }
 
 h1 {
     font-size: large;
-    font-size: 30px;
-    color: black;
+    font-size: 40px;
+    color: #F7941E;
+    text-align: center;
+    font-weight: bold;
 }
 
 h2 {
-    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-    font-size: 25px;
-    color: crimson;
+    font-size: large;
+    font-size: 40px;
+    color: #3a4953;
+    text-align: center;
+    font-weight: bold;
+}
+
+.h3-1 {
+    font-size: 20px;
+    color: #3a4953;
     font-weight: bold;
 }
 
 h3 {
     font-size: 25px;
-    color: mediumpurple;
+    color: red;
     font-weight: bold;
 }
 
@@ -48,69 +58,106 @@ h5 {
     font-weight: bold;
 }
 
-
-
 h6 {
     font-size: 15px;
     color: mediumpurple;
 }
 
+table {
+    background-color: rgb(229, 224, 224);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: black;
+    text-align: center;
+    border-collapse: collapse;
+}
 
+td {
+    min-width: 100px;
+    border: black solid 1px;
+    text-align: center;
+}
+
+.highlight td {
+    border: orange solid 1px;
+}
 
 #Property th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: palevioletred;
+    background-color: #3a4953;
     color: white;
-    font-weight: bold;
 }
-
 
 #crimetable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #D84727;
-    color: black;
+    background-color: #3a4953;
+    color: white;
     font-weight: bold;
-
 }
 
 #healthcaretable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #CDEDF6;
-    color: black;
-    font-weight: bold;
+    color: white;
+    background-color: #3a4953;
+}
+
+#Vaccine th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3a4953;
+    color: white;
 }
 
 
+#registration th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3a4953;
+    color: white;
+}
+
 .button {
-    background-color: orchid; /* Green */
+    background-color: #3a4953;
     border: groove;
     color: white;
-    padding: 10px 25px;
+    padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
 }
 
-
-
-
 body {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     color: black;
     margin: 1px;
     padding: 1px;
 }
 
 .myDiv {
-    border: 5px outset red;
-    background-color: orangered;
+    background-color: lightsteelblue;
     text-align: center;
 }
-        
+
+.div1 {
+    border: black outset 1px;
+    background-color: dodgerblue;
+    text-align: center;
+    padding: 1px;
+}
+
+.divslide {
+    text-align: center;
+    height: 50px;
+    width: 80%;
+}
+
+.myDiv {
+    text-align: center;
+}
