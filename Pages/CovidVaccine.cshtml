@@ -54,31 +54,31 @@
     <h3> See how many COVID-19 vaccines your state received!</h3>
 
 
-<div class="myDiv">
+    <div class="myDiv">
 
 
-    <table class="table" id="Vaccine">
-        <thead>
-            <tr>
-                <th class="text-center">State</th>
-                <th class="text-center">1st Doses Stock</th>
-                <th class="text-center">2nd Dose Stock</th>
-                <th class="text-center">Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (CovidVaccine.Vaccine vaccine in vaccines)
-            {
+        <table class="table" id="Vaccine">
+            <thead>
                 <tr>
-                    <td class="text-center">@vaccine.Jurisdiction</td>
-                    <td class="text-center">@vaccine.The1StDoseAllocations</td>
-                    <td class="text-center">@vaccine.The2NdDoseAllocations</td>
-                    <td class="text-center">@vaccine.WeekOfAllocations.Date</td>
+                    <th class="text-center">State</th>
+                    <th class="text-center">1st Doses Stock</th>
+                    <th class="text-center">2nd Dose Stock</th>
+                    <th class="text-center">Date</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (CovidVaccine.Vaccine vaccine in vaccines)
+                {
+                    <tr>
+                        <td class="text-center">@vaccine.Jurisdiction</td>
+                        <td class="text-center">@vaccine.The1StDoseAllocations</td>
+                        <td class="text-center">@vaccine.The2NdDoseAllocations</td>
+                        <td class="text-center">@vaccine.WeekOfAllocations.Date</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

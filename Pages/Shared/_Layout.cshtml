@@ -3,51 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset = utf-8" />
-
     <meta name="author" content="Shashi Rautela" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Property Investment</title>
-
     <meta name="description" content="brief page description" />
     <meta name="keywords" content="keywords  for, our, property investment" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-
-
 </head>
-
-
 <body>
-
     <header class="align-content-sm-center">
-
         <div class="container">
             <div class="row">
-
                 <div class="col" style="left:auto">
                     <img src="/images/logo5.jpeg" alt="logo" width="300" height="100" />
                 </div>
-
                 <div>
-                    <br /><br />
+                    <br />
+                    <br />
                     <h1> Property Investment</h1>
                 </div>
-                <div class="col order-5">
-                </div>
+                <div class="col order-5"></div>
                 <div class="col order-5">
                     <br />
                     <address class="address">
-                        Address<br />
-                        Property Investment<br />
+                        Address
+                        <br />
+                        Property Investment
+                        <br />
                         Cincinnati, OH-45236
+
                     </address>
                 </div>
             </div>
         </div>
-
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-#3a4953 border-bottom box-shadow mb-3">
             <div class="container">
-
                 <button style="color:mediumpurple" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -55,9 +46,8 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-
-                            <a class="navbar-brand" asp-area="" asp-page="/Index">
-                                <div class="col-sm" style="margin-left:0px 0px;">
+                            <a class="navbar-brand" asp-page="/Index">
+                                <div class="col-sm">
                                     <h4 type="button" class="button">
                                         Home
                                     </h4>
@@ -65,29 +55,25 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/PropertyInvestment">
+                            <a class="navbar-brand" asp-page="/PropertyInvestment">
                                 <div class="col-sm" style="margin-left:0px 0px;">
                                     <h4 type="button" class="button">
                                         Property
                                     </h4>
                                 </div>
                             </a>
-
                         </li>
-
-
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/Healthcare">
+                            <a class="navbar-brand" asp-page="/Healthcare">
                                 <div class="col-sm" style="margin-left:5px 2px;">
                                     <h4 type="button" class="button">
                                         Healthcare
                                     </h4>
                                 </div>
                             </a>
-
                         </li>
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/Crime">
+                            <a class="navbar-brand" asp-page="/Crime">
                                 <div class="col-sm" style="margin-left:5px 2px;">
                                     <h4 type="button" class="button">
                                         Crime Details
@@ -96,51 +82,43 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/CovidVaccine">
+                            <a class="navbar-brand" asp-page="/CovidVaccine">
                                 <div class="col-sm" style="margin-left:0px 2px;">
                                     <h4 type="button" class="button">
                                         Covid Vaccinations
                                     </h4>
                                 </div>
                             </a>
-
                         </li>
-
                         <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/AboutUs">
+                            <a class="navbar-brand" asp-page="/AboutUs">
                                 <div class="col-sm" style="margin-left:5px 2px;">
                                     <h4 type="button" class="button">
                                         About Us
                                     </h4>
                                 </div>
                             </a>
-
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
     <hr />
-
     <footer>
         &copy; Copyrights - Property Investment 2021
 
     </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+
 </body>
-</html>
 </html>
