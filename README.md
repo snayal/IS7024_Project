@@ -48,6 +48,10 @@ ________________________________________
 
 - [Cincinnati Health Department Health Care Centers](https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-Health-Department-Health-Care-Centers/v8yh-wpss)
 
+
+**Other Group data source:**
+
+-[Covinator](https://shashirautela-propertyinvestment.azurewebsites.net/CovidVaccine)
 ________________________________________
 
 ## Functional Requirements
