@@ -4,35 +4,40 @@
 
 ![neighborhood1](https://user-images.githubusercontent.com/47906013/111054373-31003980-843a-11eb-8a5f-7c090de88f7c.jpg)
 
+
+[Property_Investment] (https://shashirautela-propertyinvestment.azurewebsites.net/)
 -------
 
 ##### Design Document
 
-- Shashi Rautela
-
-- Ioana Guna
+- Shashi Rautela , Ioana Guna & Damon
 
 ## Introduction
 
-Do you want to find the best location for your future investment? Do you know how to search properties that are located in a safe location with healthcare facilities? MyFutureInvestment can help you:
+This website will help you to find best property location in Cincinnati based on your choice ( Propety type : Residential , Office , Retail, Hospital ), based on heathcare facilities nearby or low crime rate.   
 
--	Check location with crime incidents reported 
+-MyFutureInvestment can help you:
 
--	Know potential growth of specific locations such as future projects.
- 
-- Decide which neighborhood you want to invest
+-	**Decide which type of property you are looking for your investment**
 
-***Search***  Property Details
+- **You can also find property based on your prefered neighborhood or zipcode**
 
-***View***  Property Details in Cincinnati, OH
+-	**Onece you finalized the type of property in particular neighborhood, You can search healthcare facilitites and crime rate in location before investing in that property**
 
-***Search***   Crime Details 
 
-***View***  Crime Details in Cincinnati, OH
+***Search***  Type of property ( Residential/ Retail/Office/ Healthcare)
 
-***Search***  Healthcare 
+***View***  Type of Propertity Details in Cincinnati, OH
 
-***View***  Healthcare Details in Cincinnati, OH
+***Search***  Type of property in particular neighborhood or zipcode
+
+***Search***   Crime Details in choosen zipcode
+
+***View***  Crime Details in given zipcode
+
+***Search***  Healthcare loaction in choosen zipcode
+
+***View***  Healthcare Details in given zipcode
 
 ________________________________________
 ## Data Feeds
@@ -43,44 +48,49 @@ ________________________________________
 
 - [Cincinnati Health Department Health Care Centers](https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-Health-Department-Health-Care-Centers/v8yh-wpss)
 
+
+**Other Group data source:**
+
+-[Covinator](https://shashirautela-propertyinvestment.azurewebsites.net/CovidVaccine)
 ________________________________________
 
 ## Functional Requirements
 
 ### Requirement 1: 
 
-***Search for property***
+***Search for property Type***
 
 #### Scenario
 
-As a user interested in investing in a  property  in Cincinnati (OH), he/she can search property deatils by searching Property.
+As a user interested in investing in a  property  in Cincinnati (OH), he/she can search property by its type.
 #### Dependencies
 
-- Property details in Cincinnati data are available and accessible.
--
+- Different type of Property in Cincinnati,  data are available and accessible.
+
+
+***Search for property type  in a particular zipcode or neighborhood ***
+
+#### Scenario 1
+
+As a user interested in investing in a  particulae property type in particular location  in Cincinnati (OH)
+
+#### Dependencies
+
+-Property deatils in particular zipcode or neighborhood in Cincinnati,  data are available and accessible.
 
 #### Assumptions
 
-
-***Search for Crime details***
+***Search for Crime details in given zipcode, where used want to invest***
 
 #### Scenario
 
-As a user interested in crime details in particulat zipcode in Cincinnati (OH), he/she can search crime deatils by searching Crime information.
+As a user interested to know crime details in prefered location / neighborhood /  zipcode in Cincinnati (OH), he/she can search crime deatils by giving zipcode.
+
 #### Dependencies
 
-- Crime details in Cincinnati data are available and accessible.
+- Crime details by neighborhood/ zipcode / street details are available and accessible.
 
 ***Search for Healthcare details***
-
-
-#### Scenario
-
-As a user interested in healthcare location and services detials in Cincinnati (OH), he/she can search Healthcare deatils by searching Healthcare.
-
-#### Dependencies
-
-- Healthcare details in Cincinnati data are available and accessible.
 
 #### Examples 1.1 
 
@@ -90,50 +100,19 @@ As a user interested in healthcare location and services detials in Cincinnati (
 
 - **When**  Click search button
 
-- **Then**  It will show all the property-projects details in Cincinnati.
+- **Then**  It will show all the property-projects details with its type in Cincinnati.
 
-- **Given**  Zipcode search box
+- **Given**  search box
 
- **When**  key in zipcode
+ **When**  key in property type  (Residential)
 
-- **Then**  It will show all the detials about property-projects in given zipcode (Cincinnati).
+- **Then**  It will show "Residential" property-projects and its locations.
 
-
-#### Examples 1.2 
-
-**Search for Crime in Cincinnati**
-
-- **Given**  Crime search button
-
-- **When**  Click search button
-
-- **Then**  It will show all the crime reported details in Cincinnati.
-
-- **Given**  Zipcode search box
-
- **When**  key in zipcode
-
-- **Then**  It will show all the detials about crime incidents in given zipcode (Cincinnati).
-
-#### Examples 1.3
-
-**Search for Neighborhood in Cincinnati**
-
-- **Given**  Neighborhood search button
-
-- **When**  Click search button
-
-- **Then**  It will show all the healthcares details in Cincinnati.
-
-- **Given**  Zipcode search box
-
- **When**  key in zipcode
-
-- **Then**  It will show all the detials about healthcare in given zipcode (Cincinnati).
+-**User Selected "Residential Property" at zipcode (45202)
 
 ### Requirement 2: 
 
-***Property investment in the safe Neighborhood with Healthcare facilities nearyby***
+***Property investment in the safe Neighborhood ***
 
 #### Scenario 1:
 
@@ -141,62 +120,45 @@ As a user interested in healthcare location and services detials in Cincinnati (
 
 #### Dependencies
 
-- Crime incidents/Healthcare centers based on street address are available and accessible.
+- Crime incidents data are available and accessible.
 
 #### Assumptions
 
-- **Neighborhood name is correct.**
-
-
+- **zipcode belongs to cincinnati Ohio**
 
 ####  Example 1.1  
 
-**search safe neighborhood for property investment**
-
+**search Crime incident details as choosen zipcode where user wants to investment in the  property**
+ 
 - **Given**  Zipcode Search box
 
-- **When**  45202
+- **When**  45223
 
--  **Then**  List of crime reported in the given zipcode
+-  **Then**  details of the crimes reported in the given zipcode (45223)
 
+### Requirement 2: 
 
-##### Example 1.2 
+#### Scenario :
 
-**Search for healthcare centers around neighborhood street address**
-
-- **Given**   Zipcode
-
-- **When** 	 45204
-
-- **Then** list of healthcare centers in the given Zipcode
-
-
-#### Scenario 2:
-
-**A person wants to search for a property type in Cincinnati which has low crime incidents and healthcare centers facilities nearby**
+**A person wants to search for healthcare centers near given zipcode**
 
 ***Dependencies***
 
-- Crime incidents in Cincinnati data source is available
+***Healthcare facilities details at given zipcode***
 
-- Cincinnati Healthcare Centers data is available 
+##### Example
 
+**Search for healthcare centers at given zipcode **
 
-***Assumptions***
+- **Given**   Zipcode
 
-- Neighborhood with Low crime incidents
+- **When** 	 45223
 
-- Healthcare center nearby
-
-**Example 1.1**
-
-- ***Given***  Zipcode
-
-- ***When***  45236
-
-- ***Then*** List of Neighborhoods with reported number of crime incidents 
+- **Then**  All healthcare centers  details at given Zipcode (45223)
 
 
+**User wanted to invest in the Residential property and he found it at zipcode 45223.  He/ She checked Healthcare facilities and Crime details at zipcode 45202 and decided to 
+invest as there are 3 heathcare nearby and crime incidents are  is low. **
 ________________________________________
 
 ## Roles
